@@ -1,154 +1,296 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link href="../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../Style/StyleNavbar.css" rel="stylesheet" />
     <meta charset="utf-8" />
+
+    <link href="../Content/css/bootstrap-rtl.css" rel="stylesheet" />
+
     <title>Register</title>
 </head>
 
 <body dir="rtl">
-    <div id="navbar"></div>
+
     <div class="container">
         <form class="form-signin">
             <h1 class="form-signin-heading">הרשמה</h1>
-            <h4>אנא מלא את הפרטים הבאים</h4>
+            <h4>אנא מלא/י את הפרטים הבאים:</h4>
             <br />
-            <label for="userName">שם משתמש</label>
-            <input name="userName" type="text" id="userName" class="form-control" placeholder="שם משתמש" onfocusout="userNameValidation()">
-            <br/>
+
+            <div class="form-group">
+                <div class="row">
+                    <label for="Username" class="col-md-2 control-label">שם משתמש: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" data-bind="value:UserName, valueUpdate: 'keyup'"
+                               placeholder=" שם משתמש" />
+                        <span data-bind='visible: UserName.hasError, text: UserName.validationMessage'> </span>
+                        <br />
+                    </div>
+                    <div class="col-md-5">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label for="Username" class="col-md-2 control-label">תעודת זהות: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" data-bind="value:IdNum, valueUpdate: 'keyup'"
+                               placeholder=" תעודת זהות" />
+                        <span data-bind='visible: IdNum.hasError, text: IdNum.validationMessage'> </span>
+                        <br />
+                    </div>
+                    <div class="col-md-5">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="Username" class="col-md-2 control-label">שם פרטי: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" data-bind="value:PName, valueUpdate: 'keyup'"
+                               placeholder=" שם פרטי" />
+                        <span data-bind='visible: PName.hasError, text: PName.validationMessage'> </span>
+                        <br />
+                    </div>
+                    <div class="col-md-5">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="Username" class="col-md-2 control-label">שם משפחה: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" data-bind="value:FName, valueUpdate: 'keyup'"
+                               placeholder=" שם משפחה" />
+                        <span data-bind='visible: FName.hasError, text: FName.validationMessage'> </span>
+                        <br />
+                    </div>
+                    <div class="col-md-5">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="Username" class="col-md-2 control-label">ממוצע: </label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" data-bind="value:Avg, valueUpdate: 'keyup'"
+                               placeholder=" ממוצע" />
+                        <span data-bind='visible: Avg.hasError, text: Avg.validationMessage'> </span>
+                        <br />
+                    </div>
+                    <div class="col-md-7">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">
+                    <br />
+                    מין:
+                </label>
+                <div>
+                    <br />
+                    <select class="btn btn-default" data-bind=" options: GenderOptions,optionsCaption: 'בחר/י',value: selectedGender"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">
+                    <br />
+                    שנת לידה:
+                </label>
+                <div>
+                    <br />
+                    <select class="btn btn-default" data-bind=" options:BirthOptions,optionsCaption: 'בחר/י',value: selectedBirth"></select>
+                </div>
+            </div>
+
+           
+            <div class="form-group">
+                <label class="col-sm-1 control-label">
+                    <br />
+                    גודל קבוצה:
+                </label>
+                <div>
+                    <br />
+                    <select class="btn btn-default" data-bind=" options:GroupOptions,optionsCaption: 'בחר/י',value: selectedGroup"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">
+                    <br />
+                    נסיון:
+                </label>
+                <div>
+                    <br />
+                    <select class="btn btn-default" data-bind=" options:ExpOptions,optionsCaption: 'בחר/י',value: selecteExp"></select>
+                </div>
+            </div>
+
+            <legend>קורסי בחירה:</legend>
+            <label>
+                <input type="checkbox" value="safe" data-bind="checked: courses">
+                תכנות בטוח
+            </label>
+            <label>
+                <input type="checkbox" value="networks" data-bind="checked: courses">
+                רשתות תקשורת
+            </label>
+            <label>
+                <input type="checkbox" value="machineler" data-bind="checked: courses">
+
+                למידת מכונה
+            </label>
+            <label>
+                <input type="checkbox" value="dinalgos" data-bind="checked: courses">
+                אלגוריתמים דינמיים
+            </label>
+            <label>
+                <input type="checkbox" value="safe" data-bind="checked: courses">
+                עיבוד תמונה
+            </label>
             <br />
-            <label for="id">מספר תעודת זהות:</label>
-            <input name="id" type="number" id="id" class="form-control" placeholder="תעודת זהות" required> 
-            <br/>
+            <label>
+                <input type="checkbox" value="swval" data-bind="checked: courses">
+                שיטות אימות לתוכנה
+            </label>
+            <label>
+                <input type="checkbox" value="sql" data-bind="checked: courses">
+                מערכות מסדי נתונים
+            </label>
+            <label>
+                <input type="checkbox" value="ai" data-bind="checked: courses">
+                בינה מלאכותית
+            </label>
+            <label>
+                <input type="checkbox" value="gamesintro" data-bind="checked: courses">
+                מבוא לתורת המשחקים
+            </label>
             <br />
-            <label for="firstName">שם פרטי</label>
-            <input type="text" id="firstName" class="form-control" placeholder="שם פרטי" required onfocusout>
-            <br/>
+            <label>
+                <input type="checkbox" value="crypto" data-bind="checked: courses">
+                מבוא לקריפטוגרפיה
+            </label>
+            <label>
+                <input type="checkbox" value="natlang" data-bind="checked: courses">
+                עיבוד שפות טבעיות
+            </label>
+            <label>
+                <input type="checkbox" value="introInteligence" data-bind="checked: courses">
+                מבוא למערכות תבוניות
+            </label>
+            <label>
+                <input type="checkbox" value="robotics" data-bind="checked: courses">
+                מבוא לרובוטיקה
+            </label>
             <br />
-            <label for="inputEmail">שם משפחה</label>
-            <input name="lastName" type="text" id="lastName" class="form-control" placeholder="שם משפחה" required>
+            <label>
+                <input type="checkbox" value="bioligic" data-bind="checked: courses">
+                ביולוגיה חישובית
+            </label>
+            <label>
+                <input type="checkbox" value="decision" data-bind="checked: courses">
+                קבלת החלטות
+            </label>
+            <label>
+                <input type="checkbox" value="dinamicAlgos" data-bind="checked: courses">
+                אלגוריתמים דינאמיים
+            </label>
+            <label>
+                <input type="checkbox" value="safe" data-bind="checked: courses">
+                מסדי נתונים מתקדמים
+            </label>
+            <label>
+                <input type="checkbox" value="dataManage" data-bind="checked: courses">
+                ניהול נתוני עתק
+            </label>
             <br />
+            <label>
+                <input type="checkbox" value="picture" data-bind="checked: courses">
+                עיבוד תמונה
+            </label>
+            <label>
+                <input type="checkbox" value="safe" data-bind="checked: courses">
+                ראיה ממוחשבת
+            </label>
+            <label>
+                <input type="checkbox" value="distributedSystems" data-bind="checked: courses">
+                מערכות מבוזרות
+            </label>
+            <label>
+                <input type="checkbox" value="desidnTemp" data-bind="checked: courses">
+                עיצוב תבניות
+            </label>
             <br />
-            <label for="gender">מין</label>
-            <select name="gender">
-                <option value="בחר">בחר/י</option>
-                <option value="זכר">זכר</option>
-                <option value="נקבה">נקבה</option>
-            </select>
-            <br/>
+            <label>
+                <input type="checkbox" value="roboAlgos" data-bind="checked: courses">
+                שיטות אלגוריתמיות לפתרון בעיות רובוטים
+            </label>
+            <label>
+                <input type="checkbox" value="grafic" data-bind="checked: courses">
+                גרפיקה ממוחשבת
+            </label>
+            <label>
+                <input type="checkbox" value="multimedia" data-bind="checked: courses">
+                מולטימדיה
+            </label>
+            <label>
+                <input type="checkbox" value="deapLearning" data-bind="checked: courses">
+                שיטות דיפ לרנינג לטקסטים ורצפים
+            </label>
             <br />
-            <label for="inputEmail">שנת לידה:</label>
-            <input name="birthYear" type="text" id="birthYear" class="form-control" placeholder="שנת לידה" required>
-            <br />
-            <br />
-            <label for="inputEmail">ממוצע:</label>
-            <input name="average" type="text" id="average" class="form-control" placeholder="ממוצע" required>
-            <br />
-            <br />
-            <label for="inputEmail">גודל קבוצה</label>
-            <input name="groupSize" type="text" id="groupSize" class="form-control" placeholder="גודל קבוצה" required>
-            <br />
-            <br />
-            <legend>קורסים</legend>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">תכנות בטוח</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">רשתות תקשורת</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">למידת מכונה</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">אלגוריתמים דינמיים</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">עיבוד תמונה</label>
-            <br />
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">שיטות אימות לתוכנה</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מערכות מסדי נתונים</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">בינה מלאכותית</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מבוא לתורת המשחקים</label>
-            <br />
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מבוא לקריפטוגרפיה</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">עיבוד שפות טבעיות</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מבוא למערכות תבוניות</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מבוא לרובוטיקה</label>
-            <br />
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">ביולוגיה חישובית</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">קבלת החלטות</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">אלגוריתמים דינאמיים</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מסדי נתונים מתקדמים</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">ניהול נתוני עתק</label>
-            <br />
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">עיבוד תמונה</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">ראיה ממוחשבת</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">שיטות אימות תוכנה</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מערכות מבוזרות</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">עיצוב תבניות</label>
-            <br />
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">שיטות אלגוריתמיות לפתרון בעיות רובוטים</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">גרפיקה ממוחשבת</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">מולטימדיה</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">שיטות דיפ לרנינג לטטקסטים ורצפים</label>
-            <br />
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">תורת הגרפים</label>
+            <label>
+                <input type="checkbox" value="graphesTheory" data-bind="checked: courses">
+                תורת הגרפים
+            </label>
             <br />
             <br />
             <legend>שפות תכנות</legend>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">C</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">C++</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">c#</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">Java</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">Java Script</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">MATLAB</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">HTML</label>
-            <input type="checkbox" id="male" name="interest" value="male">
-            <label for="coding">python</label>
+            <label>
+                <input type="checkbox" value="c" data-bind="checked: codeLang">
+                C
+            </label>
+            <label>
+                <input type="checkbox" value="c++" data-bind="checked: codeLang">
+                C++
+            </label>
+            <label>
+                <input type="checkbox" value="c#" data-bind="checked: codeLang">
+                c#
+            </label>
+            <label>
+                <input type="checkbox" value="Java" data-bind="checked: codeLang">
+                Java
+            </label>
+            <label>
+                <input type="checkbox" value="js" data-bind="checked: codeLang">
+                Java Script
+            </label>
+            <label>
+                <input type="checkbox" value="MATLAB" data-bind="checked: codeLang">
+                MATLAB
+            </label>
+            <label>
+                <input type="checkbox" value="HTML" data-bind="checked: codeLang">
+                HTML
+            </label>
+            <label>
+                <input type="checkbox" value=" python" data-bind="checked: codeLang">
+                python
+            </label>
             <br />
-            <br/>
-            <label for="gender">נסיון</label>
-            <select name="experience">
-                <option value="בחר">בחר/י</option>
-                <option value="זכר">ללא נסיון</option>
-                <option value="נקבה">עד שנה</option>
-                <option value="נקבה">1-2 שנים</option>
-                <option value="נקבה">3-5 שנים</option>
-                <option value="נקבה">יותר מ 5</option>
-            </select>
             <br />
-            <br />
-            <button id="btn_submit" class="btn btn-lg btn-primary" type="button">Submit</button>
-            <script src="../Scripts/jquery-3.1.1.js"></script>
-            <script src="../Scripts/RegisterScript.js" type="text/javascript"></script>
-            <script src="../Scripts/NavbarScript.js"></script>
+
+            <button  class="btn btn-lg btn-primary" type="button"data-bind="click: StartBtn, enable:isFormValid">Submit</button>
+
+
+            <script src="../Scripts/jquery-3.2.1.js"></script>
+            <script src="../Scripts/knockout-3.4.2.js"></script>
+            <script src="../Scripts/knockout.validation.js"></script>
+            <script src="../Scripts/StudentScript.js"></script>
         </form>
 
     </div>
