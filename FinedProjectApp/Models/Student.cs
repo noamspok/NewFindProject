@@ -46,13 +46,11 @@ namespace FinedProjectApp.Models
         public string Location { get; set; }
         //student preference in fild of project: industry/ reserch 
         [Required]
-        public string FildOfProject { get; set; }
+        public string FieldOfProject { get; set; }
         //days where student is free for working on project.
         [Required]
         public List<string> FreeDays { get; set; }
-        //students degree mayjer and secondary
-        [Required]
-        public string Degree { get; set; }
+        
         //amount of years of experience
         [Required]
         public int Experience { get; set; }
