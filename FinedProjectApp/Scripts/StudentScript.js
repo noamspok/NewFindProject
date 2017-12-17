@@ -1,4 +1,4 @@
-﻿$("#btn_register").click(function () {
+﻿$("#btn_submit").click(function () {
     var student = {
         userName: $("#userName").val(),
         Password: $("#Password").val(),
