@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Style/StyleNavbar.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>Register</title>
+</head>
+
+<body dir="rtl">
+    <div id="navbar"></div>
+    <div class="container">
+        <form class="form-signin">
+            <h1 class="form-signin-heading">הרשמה</h1>
+            <h4>אנא מלא את הפרטים הבאים</h4>
+            <br />
+            <label for="userName">שם משתמש</label>
+            <input name="userName" type="text" id="userName" class="form-control" placeholder="שם משתמש" required onfocusout="userNameValidation()">
+            <br/>
+            <br />
+            <label for="id">מספר תעודת זהות:</label>
+            <input name="id" type="number" id="id" class="form-control" placeholder="תעודת זהות" required> 
+            <br/>
+            <br />
+            <label for="firstName">שם פרטי</label>
+            <input type="text" id="firstName" class="form-control" placeholder="שם פרטי" required onfocusout>
+            <br/>
+            <br />
+            <label for="inputEmail">שם משפחה</label>
+            <input name="lastName" type="text" id="lastName" class="form-control" placeholder="שם משפחה" required>
+            <br />
+            <br />
+            <label for="gender">מין</label>
+            <select name="gender">
+                <option value="בחר">בחר/י</option>
+                <option value="זכר">זכר</option>
+                <option value="נקבה">נקבה</option>
+            </select>
+            <br/>
+            <br />
+            <label for="inputEmail">שנת לידה:</label>
+            <input name="birthYear" type="text" id="birthYear" class="form-control" placeholder="שנת לידה" required>
+            <br />
+            <br />
+            <label for="inputEmail">ממוצע:</label>
+            <input name="average" type="text" id="average" class="form-control" placeholder="ממוצע" required>
+            <br />
+            <br />
+            <label for="inputEmail">גודל קבוצה</label>
+            <input name="groupSize" type="text" id="groupSize" class="form-control" placeholder="גודל קבוצה" required>
+            <br />
+            <br />
+            <legend>קורסים</legend>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">תכנות בטוח</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">רשתות תקשורת</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">למידת מכונה</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">אלגוריתמים דינמיים</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">עיבוד תמונה</label>
+            <br />
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">שיטות אימות לתוכנה</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מערכות מסדי נתונים</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">בינה מלאכותית</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מבוא לתורת המשחקים</label>
+            <br />
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מבוא לקריפטוגרפיה</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">עיבוד שפות טבעיות</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מבוא למערכות תבוניות</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מבוא לרובוטיקה</label>
+            <br />
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">ביולוגיה חישובית</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">קבלת החלטות</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">אלגוריתמים דינאמיים</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מסדי נתונים מתקדמים</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">ניהול נתוני עתק</label>
+            <br />
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">עיבוד תמונה</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">ראיה ממוחשבת</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">שיטות אימות תוכנה</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מערכות מבוזרות</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">עיצוב תבניות</label>
+            <br />
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">שיטות אלגוריתמיות לפתרון בעיות רובוטים</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">גרפיקה ממוחשבת</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">מולטימדיה</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">שיטות דיפ לרנינג לטטקסטים ורצפים</label>
+            <br />
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">תורת הגרפים</label>
+            <br />
+            <br />
+            <legend>שפות תכנות</legend>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">C</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">C++</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">c#</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">Java</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">Java Script</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">MATLAB</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">HTML</label>
+            <input type="checkbox" id="male" name="interest" value="male">
+            <label for="coding">python</label>
+            <br />
+            <br/>
+            <label for="gender">נסיון</label>
+            <select name="experience">
+                <option value="בחר">בחר/י</option>
+                <option value="זכר">ללא נסיון</option>
+                <option value="נקבה">עד שנה</option>
+                <option value="נקבה">1-2 שנים</option>
+                <option value="נקבה">3-5 שנים</option>
+                <option value="נקבה">יותר מ 5</option>
+            </select>
+            <br />
+            <br />
+            <button id="btn_register" class="btn btn-lg btn-primary" type="button">Submit</button>
+            <script src="../Scripts/jquery-3.1.1.js"></script>
+            <script src="../Scripts/RegisterScript.js" type="text/javascript"></script>
+            <script src="../Scripts/NavbarScript.js"></script>
+        </form>
+
+    </div>
+</body>
+</html>

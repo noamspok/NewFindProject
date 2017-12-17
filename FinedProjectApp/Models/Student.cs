@@ -11,7 +11,11 @@ namespace FinedProjectApp.Models
         /*
          * students personal details
          */
+         //students profile nekname.
+        [Key]
+        public string UserName { get; set; }
         //students id
+        [Required]
         public int Id { get; set; }
         //students first name
         [Required]
@@ -22,10 +26,7 @@ namespace FinedProjectApp.Models
         //students gender: male/female
         [Required]
         public string Gender { get; set; }
-        //students age???????
-        [Required]
-        public string Age { get; set; }
-        //or to put the birthday????
+        //or to put the birthday
         public DateTime BirthDate { get; set; }
         /*
          * students professional information
@@ -48,7 +49,7 @@ namespace FinedProjectApp.Models
         public string FildOfProject { get; set; }
         //days where student is free for working on project.
         [Required]
-        public string FreeDays { get; set; }
+        public List<string> FreeDays { get; set; }
         //students degree mayjer and secondary
         [Required]
         public string Degree { get; set; }
@@ -57,7 +58,7 @@ namespace FinedProjectApp.Models
         public int Experience { get; set; }
         //programming languages that student is familiar whith
         [Required]
-        public string ProgrammingLanguage { get; set; }
+        public List<string> ProgrammingLanguage { get; set; }
         
     }
 }
