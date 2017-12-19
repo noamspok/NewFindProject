@@ -140,16 +140,26 @@
                 <select class="btn btn-default" data-bind=" options:reserchOptions,optionsCaption: 'בחר/י',value: selectedReserch"></select>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-1 control-label">
-                <br />
-                מיקום הפרויקט:
-            </label>
-            <div>
-                <br />
-                <select class="btn btn-default" data-bind=" options:locationOptions,optionsCaption: 'בחר/י',value: selectedLocation"></select>
-            </div>
-        </div>
+        <br />
+        <br />
+        <legend>מיקום הפרויקט:</legend>
+        <label class="col-sm-2">
+            <input type="checkbox" value="center'" data-bind="checked: Location">
+            מרכז
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="uni" data-bind="checked: Location">
+            אוניברסיטה
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="south" data-bind="checked: Location">
+            דרום
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="north" data-bind="checked: Location">
+            צפון
+        </label>
+        
         <br />
         <br />
         <legend>ימים פנויים</legend>
@@ -204,7 +214,7 @@
                     אלגוריתמים דינמיים
                 </label>
                 <label class="col-sm-2">
-                    <input type="checkbox" value="safe" data-bind="checked: courses">
+                    <input type="checkbox" value="pic" data-bind="checked: courses">
                     עיבוד תמונה
                 </label>
 
@@ -260,7 +270,7 @@
                     אלגוריתמים דינאמיים
                 </label>
                 <label class="col-sm-2">
-                    <input type="checkbox" value="safe" data-bind="checked: courses">
+                    <input type="checkbox" value="advsql" data-bind="checked: courses">
                     מסדי נתונים מתקדמים
                 </label>
                 <label class="col-sm-2">
@@ -274,7 +284,7 @@
                     עיבוד תמונה
                 </label>
                 <label class="col-sm-2">
-                    <input type="checkbox" value="safe" data-bind="checked: courses">
+                    <input type="checkbox" value="compsite" data-bind="checked: courses">
                     ראיה ממוחשבת
                 </label>
                 <label class="col-sm-2">

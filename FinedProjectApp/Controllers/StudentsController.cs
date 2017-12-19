@@ -72,6 +72,7 @@ namespace FinedProjectApp.Controllers
 
         // POST: api/Students
         [ResponseType(typeof(Student))]
+        [HttpPost()]
         public IHttpActionResult PostStudent(Student student)
         {
             if (!ModelState.IsValid)

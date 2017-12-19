@@ -27,7 +27,7 @@ namespace FinedProjectApp.Models
         [Required]
         public string Gender { get; set; }
         //or to put the birthday
-        public DateTime BirthDate { get; set; }
+        public int BirthDate { get; set; }
         /*
          * students professional information
          */
@@ -49,14 +49,14 @@ namespace FinedProjectApp.Models
         public string FieldOfProject { get; set; }
         //days where student is free for working on project.
         [Required]
-        public List<string> FreeDays { get; set; }
+        public string FreeDays { get; set; }
         
         //amount of years of experience
         [Required]
-        public int Experience { get; set; }
+        public string Experience { get; set; }
         //programming languages that student is familiar whith
         [Required]
-        public List<string> ProgrammingLanguage { get; set; }
+        public string ProgrammingLanguage { get; set; }
         
     }
 }
