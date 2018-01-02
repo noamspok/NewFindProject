@@ -9,7 +9,7 @@ namespace FinedProjectApp.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(FinedProjectApp.Models.StudentsContext context)

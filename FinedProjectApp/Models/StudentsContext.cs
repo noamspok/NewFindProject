@@ -17,6 +17,7 @@ namespace FinedProjectApp.Models
     
         public StudentsContext() : base("name=StudentsContext")
         {
+            Database.SetInitializer<StudentsContext>(new CreateDatabaseIfNotExists<StudentsContext>());
         }
 
         public System.Data.Entity.DbSet<FinedProjectApp.Models.Student> Students { get; set; }
