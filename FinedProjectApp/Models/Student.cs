@@ -17,6 +17,9 @@ namespace FinedProjectApp.Models
         //students id
         [Required]
         public int Id { get; set; }
+        //students email
+        [Required]
+        public string Email { get; set; }
         //students first name
         [Required]
         public string FirstName { get; set; }

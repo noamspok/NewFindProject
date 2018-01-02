@@ -125,11 +125,13 @@
     <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Scripts\modal.js" />
     <Content Include="Scripts\popover.js" />
+    <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\scrollspy.js" />
     <Content Include="Scripts\StudentScript.js" />
     <Content Include="Scripts\tab.js" />
     <Content Include="Scripts\tooltip.js" />
     <Content Include="Scripts\transition.js" />
+    <Content Include="View\Register.html" />
     <Content Include="View\Student.html" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   
+    <link href="../Content/css/bootstrap-rtl.css" rel="stylesheet" />
+    <title>
+        Register
+    </title>
+
+
+</head>
+<body>
+
+   
+
+    
+
+    <div class="container">
+        <h1>הרשמה</h1>
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="form-group">
+            <div class="row">
+                <label for="Username" class="col-md-2 control-label text-left">שם משתמש: </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" data-bind="value:UserName, valueUpdate: 'keyup'"
+                           placeholder=" שם משתמש" />
+                    <span data-bind='visible: UserName.hasError, text: UserName.validationMessage'> </span>
+                    <br />
+                </div>
+                <div class="col-md-7">
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label for="Password" class="col-md-2 control-label text-left">סיסמא: </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" data-bind="value:Password, valueUpdate: 'keyup'"
+                           placeholder=" סיסמא" />
+                    <span data-bind='visible: Password.hasError, text: Password.validationMessage'> </span>
+                    <br />
+                </div>
+                <div class="col-md-7">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <label for="Password2" class="col-md-2 control-label text-left">וידוא סיסמא: </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" data-bind="value:Password2, valueUpdate: 'keyup'"
+                           placeholder=" סיסמא שוב" />
+                    <span data-bind='visible: Password2.hasError, text: Password2.validationMessage'> </span>
+                    <br />
+                </div>
+                <div class="col-md-7">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <label for="Email" class="col-md-2 control-label text-left">email: </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" data-bind="value:Email, valueUpdate: 'keyup'"
+                           placeholder=" Email" />
+                    <span data-bind='visible: Email.hasError, text: Email.validationMessage'> </span>
+                    <br />
+                </div>
+                <div class="col-md-7">
+
+                </div>
+            </div>
+        </div>
+
+    </div>             
+    
+    <div class="container  ">
+        <div class="form-group">
+            
+            <label class="col-sm-2 control-label  text-left">
+                <br />
+                תפקיד:
+            </label>
+            <div>
+                <br />
+                <select class="btn btn-default text-center" data-bind=" options: Options,optionsCaption: 'בחר/י',value: selected"></select>
+            </div>
+            <br />
+            <br />
+        </div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2">
+            <button class="btn btn-default text-center">הרשמה</button>
+        </div>
+    </div>
+    <script src="../Scripts/jquery-3.2.1.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/knockout.validation.js"></script>
+    <script src="../Scripts/Register.js"></script>
+</body>
+
+</html>
