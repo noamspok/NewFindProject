@@ -137,11 +137,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ProjectDirectorsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ProjectDirec.cs" />
+    <Compile Include="Models\ProjectDirectorsContext.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
