@@ -30,25 +30,14 @@ function AppViewModel() {
             "Password": JsPass,
             "Email": JsEmail
         };
-        var apiUrl = "../api/Registry";
-        $.post(apiUrl, JsonData).done(function (item) {
-            alert("נרשמת בהצלחה");
-            sessionStorage.loggedInUser = ko.toJS(that.UserName);
-        }).fail(function (jqXHR, status, errorThrown) {
-            // if wrong arguments
-            if (errorThrown == "BadRequest") {
-                alert('Wrong details');
-            }
-            // if the user already exist
-            else if (errorThrown == "Conflict") {
-                alert('Username already exist');
-            }
-            else {
-                alert('Failed to send request to server');
-            }
-
-        });
-
+        sessionStorage.UserName = ko.toJS(that.UserName);
+        sessionStorage.Password = ko.toJS(that.Password);
+        sessionStorage.Email = ko.toJS(that.Email);
+        if (this.selected == "student") {
+            location.replace("../View/Student.html");
+        } else {
+            location.replace("../View/ProjectDirector.html");
+        }
     };
 
     this.isFormValid = ko.computed(function () {

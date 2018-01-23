@@ -14,6 +14,10 @@ namespace FinedProjectApp.Models
          //students profile nekname.
         [Key]
         public string UserName { get; set; }
+        
+        //student's password
+        [Required]
+        public string Password { get; set; }
         //students id
         [Required]
         public int Id { get; set; }

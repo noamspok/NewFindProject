@@ -15,7 +15,10 @@ public class ProjectDirec
     //Project Director profile nickname.
     [Key]
     public string UserName { get; set; }
-
+    
+    //Project Director password
+    [Required]
+    public string Password { get; set; }
 
     [Required]
     public string Email { get; set; }
