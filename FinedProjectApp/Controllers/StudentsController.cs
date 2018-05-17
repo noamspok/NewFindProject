@@ -73,17 +73,13 @@ namespace FinedProjectApp.Controllers
         // POST: api/Students
         [ResponseType(typeof(Student))]
         [HttpPost()]
-        public IHttpActionResult PostStudent(Student student)
+        public void PostStudent(Student student)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            if (!Repositories.AddStudent.AddStudents(student))
+            { 
 
-            db.Students.Add(student);
-            db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = student.Id }, student);
+             throw new HttpResponseException(HttpStatusCode.BadRequest);
+             }
         }
 
         // DELETE: api/Students/5

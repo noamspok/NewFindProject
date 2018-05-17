@@ -86,6 +86,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -110,10 +114,29 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="files\research\Projects1.docx" />
+    <Content Include="files\research\Projects2.docx" />
+    <Content Include="files\research\Yani.pdf" />
+    <Content Include="files\industry\aclartech.pdf" />
+    <Content Include="files\industry\AE-40.pdf" />
+    <Content Include="files\industry\anibaba.pdf" />
+    <Content Include="files\industry\apertio.docx" />
+    <Content Include="files\industry\BioEye.docx" />
+    <Content Include="files\industry\Brillianetor.pdf" />
+    <Content Include="files\industry\Feedvisor.docx" />
+    <Content Include="files\industry\Grigale.docx" />
+    <Content Include="files\industry\ibs.pdf" />
+    <Content Include="files\industry\iLook.pdf" />
+    <Content Include="files\industry\Maxsoft.pdf" />
+    <Content Include="files\industry\Mobilicom.doc" />
+    <Content Include="files\industry\Radware.docx" />
+    <Content Include="files\industry\wisenet.docx" />
+    <Content Include="files\industry\wizebox.docx" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\button.js" />
     <Content Include="Scripts\carousel-rtl.js" />
     <Content Include="Scripts\collapse.js" />
+    <Content Include="Scripts\DirectorsProjects.js" />
     <Content Include="Scripts\dropdown.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
@@ -128,18 +151,22 @@
     <Content Include="Scripts\ProjectDirectorScript.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\scrollspy.js" />
+    <Content Include="Scripts\StudentPreferenceScript.js" />
     <Content Include="Scripts\StudentScript.js" />
     <Content Include="Scripts\tab.js" />
     <Content Include="Scripts\tooltip.js" />
     <Content Include="Scripts\transition.js" />
+    <Content Include="View\DirectorsProjects.html" />
     <Content Include="View\ProjectDirector.html" />
     <Content Include="View\Register.html" />
     <Content Include="View\Student.html" />
+    <Content Include="View\StudentPreference.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProjectDirectorsController.cs" />
+    <Compile Include="Controllers\StudentPrefsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -148,8 +175,11 @@
     <Compile Include="Models\ProjectDirec.cs" />
     <Compile Include="Models\ProjectDirectorsContext.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentPref.cs" />
     <Compile Include="Models\StudentsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AddStudent.cs" />
+    <Compile Include="Repositories\AddStudentPreference.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -163,9 +193,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

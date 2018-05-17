@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../Content/css/bootstrap-rtl.css" rel="stylesheet" />
+    <title>
+        Student Preference
+    </title>
+</head>
+<body dir="rtl">
+    <div class="container">
+        <h1 class="form-signin-heading">העדפות פרויקט</h1>
+        <h4>אנא מלא/י את הפרטים הבאים:</h4>
+        <br />
+        <div class="form-group">
+            <div class="row">
+                <label class="col-sm-2 control-label">
+                    <br />
+                    סוג פרוייקט:
+                </label>
+                <div>
+                    <br />
+                    <select class="btn btn-default" data-bind=" options:reserchOptions,optionsCaption: 'בחר/י',value: selectedReserch"></select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <legend>תחום פרויקט: </legend>
+        <label class="col-sm-2">
+            <input type="checkbox" value="MachineLearn'" data-bind="checked: ProjectOptions">
+
+            למידת מכונה
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="AI" data-bind="checked: ProjectOptions">
+
+            בינה מלאכותית
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="web'" data-bind="checked: ProjectOptions">
+
+            web
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="infosecu'" data-bind="checked: ProjectOptions">
+            אבטחת מידע
+
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="aplication'" data-bind="checked: ProjectOptions">
+
+            אפליקציה
+        </label>
+        <label class="col-sm-2">
+            <input type="checkbox" value="other'" data-bind="checked: ProjectOptions">
+
+            אחר
+        </label>
+
+        <br />
+
+
+
+        <br /><br />
+        <legend>מיקום הנחיית הפרוייקט:</legend>
+        <label class="col-sm-6">
+            <input type="checkbox" value="uniOut'" data-bind="checked: Location">
+            מחוץ לאוניברסיטה
+        </label>
+        <label class="col-sm-6">
+            <input type="checkbox" value="uni" data-bind="checked: Location">
+            אוניברסיטה
+        </label>
+
+
+        <br />
+        <br />
+
+
+        <div class="form-group">
+
+            <label class="col-sm-1 control-label">
+
+                <br />
+
+                גודל קבוצה:
+
+            </label>
+
+            <div>
+
+                <br />
+
+                <select class="btn btn-default" data-bind=" options:GroupOptions,optionsCaption: 'בחר/י',value: selectedGroup"></select>
+                <br /><br /><br />
+            </div>
+
+        </div>
+
+        <legend>שפות תכנות ידועות</legend>
+
+        <div class="row">
+            <label class="col-sm-2">
+                <input type="checkbox" value="c" data-bind="checked: codeLang">
+                C
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="++c" data-bind="checked: codeLang">
+                C++
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="#c" data-bind="checked: codeLang">
+                c#
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="Java" data-bind="checked: codeLang">
+                Java
+            </label>
+
+            <label class="col-sm-2">
+                <input type="checkbox" value="HTML" data-bind="checked: codeLang">
+                HTML
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value=" python" data-bind="checked: codeLang">
+                python
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="js" data-bind="checked: codeLang">
+                Java Script
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="MATLAB" data-bind="checked: codeLang">
+                MATLAB
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="SQL" data-bind="checked: codeLang">
+                SQL
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="React" data-bind="checked: codeLang">
+                React
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="Angular" data-bind="checked: codeLang">
+                Angular
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="Swift" data-bind="checked: codeLang">
+                swift (ios)
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="PHP" data-bind="checked: codeLang">
+                PHP
+            </label>
+        </div>
+        <br/><br /><br /><br />
+        <div class="col-lg-4">
+            <button class="btn btn-lg btn-primary" type="button" data-bind="click: SubmitBtn">Submit</button>
+        </div>
+    </div>
+    <script src="../Scripts/jquery-3.2.1.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/knockout.validation.js"></script>
+    <script src="../Scripts/StudentPreferenceScript.js"></script>
+</body>
+</html>

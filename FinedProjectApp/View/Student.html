@@ -34,32 +34,7 @@
 
 
 
-        <div class="form-group">
-
-            <div class="row">
-
-                <label for="Username" class="col-md-2 control-label">שם משתמש: </label>
-
-                <div class="col-md-5">
-
-                    <input type="text" class="form-control" data-bind="value:UserName, valueUpdate: 'keyup'"
-                           placeholder=" שם משתמש" />
-
-                    <span data-bind='visible: UserName.hasError, text: UserName.validationMessage'> </span>
-
-                    <br />
-
-                </div>
-
-                <div class="col-md-5">
-
-
-
-                </div>
-
-            </div>
-
-        </div>
+       
 
 
 
@@ -171,219 +146,14 @@
 
         </div>
 
-        <div class="form-group">
+        
 
-            <label class="col-sm-1 control-label">
 
-                <br />
 
-                מין:
 
-            </label>
+      
 
-            <div>
-
-                <br />
-
-                <select class="btn btn-default" data-bind=" options: GenderOptions,optionsCaption: 'בחר/י',value: selectedGender"></select>
-
-            </div>
-
-        </div>
-
-        <div class="form-group">
-
-            <label class="col-sm-1 control-label">
-
-                <br />
-
-                שנת לידה:
-
-            </label>
-
-            <div>
-
-                <br />
-
-                <select class="btn btn-default" data-bind=" options:BirthOptions,optionsCaption: 'בחר/י',value: selectedBirth"></select>
-
-            </div>
-
-        </div>
-
-
-
-
-
-        <div class="form-group">
-
-            <label class="col-sm-1 control-label">
-
-                <br />
-
-                גודל קבוצה:
-
-            </label>
-
-            <div>
-
-                <br />
-
-                <select class="btn btn-default" data-bind=" options:GroupOptions,optionsCaption: 'בחר/י',value: selectedGroup"></select>
-
-            </div>
-
-        </div>
-
-        <div class="form-group">
-
-            <label class="col-sm-1 control-label">
-
-                <br />
-
-                נסיון:
-
-            </label>
-
-            <div>
-
-                <br />
-
-                <select class="btn btn-default" data-bind=" options:ExpOptions,optionsCaption: 'בחר/י',value: selecteExp"></select>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="form-group">
-
-            <label class="col-sm-1 control-label">
-
-                <br />
-
-                תחום פרויקט:
-
-            </label>
-
-            <div>
-
-                <br />
-
-                <select class="btn btn-default" data-bind=" options:reserchOptions,optionsCaption: 'בחר/י',value: selectedReserch"></select>
-
-            </div>
-
-        </div>
-
-        <br />
-
-        <br />
-
-        <legend>מיקום הפרויקט:</legend>
-
-        <label class="col-sm-2">
-
-            <input type="checkbox" value="center'" data-bind="checked: Location">
-
-            מרכז
-
-        </label>
-
-        <label class="col-sm-2">
-
-            <input type="checkbox" value="uni" data-bind="checked: Location">
-
-            אוניברסיטה
-
-        </label>
-
-        <label class="col-sm-2">
-
-            <input type="checkbox" value="south" data-bind="checked: Location">
-
-            דרום
-
-        </label>
-
-        <label class="col-sm-2">
-
-            <input type="checkbox" value="north" data-bind="checked: Location">
-
-            צפון
-
-        </label>
-
-
-
-        <br />
-
-        <br />
-
-        <legend>ימים פנויים</legend>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="sun" data-bind="checked: free">
-
-            ראשון
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="mon" data-bind="checked: free">
-
-            שני
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="tue" data-bind="checked: free">
-
-            שלישי
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="wedn" data-bind="checked: free">
-
-            רביעי
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="thu" data-bind="checked: free">
-
-            חמישי
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="fri" data-bind="checked: free">
-
-            שישי
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="sat" data-bind="checked: free">
-
-            שבת
-
-        </label>
-
-        <br /><br />
-
-
-
-        <legend>קורסי בחירה:</legend>
+        <legend>  קורסי בחירה שנלקחו:</legend>
 
         <div class="form-group">
 
@@ -643,73 +413,61 @@
 
         <br />
 
-        <legend>שפות תכנות</legend>
+        <div class="row">
+            <label class="col-sm-2">
+                <input type="checkbox" value="c" data-bind="checked: codeLang">
+                C
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="++c" data-bind="checked: codeLang">
+                C++
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="#c" data-bind="checked: codeLang">
+                c#
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="Java" data-bind="checked: codeLang">
+                Java
+            </label>
 
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="c" data-bind="checked: codeLang">
-
-            C
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="++c" data-bind="checked: codeLang">
-
-            C++
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="#c" data-bind="checked: codeLang">
-
-            c#
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="Java" data-bind="checked: codeLang">
-
-            Java
-
-        </label>
-
-
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value="HTML" data-bind="checked: codeLang">
-
-            HTML
-
-        </label>
-
-        <label class="col-sm-1">
-
-            <input type="checkbox" value=" python" data-bind="checked: codeLang">
-
-            python
-
-        </label>
-
-        <label class="col-sm-2">
-
-            <input type="checkbox" value="js" data-bind="checked: codeLang">
-
-            Java Script
-
-        </label>
-
-        <label class="col-sm-2">
-
-            <input type="checkbox" value="MATLAB" data-bind="checked: codeLang">
-
-            MATLAB
-
-        </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="HTML" data-bind="checked: codeLang">
+                HTML
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value=" python" data-bind="checked: codeLang">
+                python
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="js" data-bind="checked: codeLang">
+                Java Script
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="MATLAB" data-bind="checked: codeLang">
+                MATLAB
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="SQL" data-bind="checked: codeLang">
+                SQL
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="React" data-bind="checked: codeLang">
+                React
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="Angular" data-bind="checked: codeLang">
+                Angular
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="Swift" data-bind="checked: codeLang">
+                swift (ios)
+            </label>
+            <label class="col-sm-2">
+                <input type="checkbox" value="PHP" data-bind="checked: codeLang">
+                PHP
+            </label>
+        </div>
 
         <br />
 

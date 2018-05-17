@@ -6,33 +6,37 @@ ko.validation.registerExtenders();
 
 function AppViewModel() {
     var that = this;
-    this.UserName = ko.observable("").extend({ required: { message: "אנא מלא/י את שם המשתמש שלך" } });
-    this.PName = ko.observable("").extend({ required: { message: "אנא מלא/י את השם הפרטי שלך" } });
-    this.FName = ko.observable("").extend({ required: { message: "אנא מלא/י את שם המשפחה שלך" } });
-    this.reserchOptions = ko.observableArray(["תעשיה", "מחקר", "לא משנה"]);
-    this.amountDaysOptions = ko.observableArray(["פעם בשבוע", "פעמיים בחודש", "פעם בחודש", "פעם בחודשיים"]);
-    this.Location = ko.observableArray([]);
+    
+    this.PName = ko.observable("").extend({ required: { message: "אנא מלא/י את שם הפרוייקט" } });
+    this.GroupOptions = ko.observableArray(["1", "2", "3", "4"]);
+    this.reserchOptions = ko.observableArray(["תעשיה", "מחקר"]);
+    this.ProjectOptions = ko.observableArray([]);
+    
+    this.selectedGroup = ko.observable("");  
+
     this.selectedReserch = ko.observable("");
-    this.freeDays = ko.observableArray([]);
+    this.Location = ko.observableArray([]);
     this.codeLang = ko.observableArray([]);
-    this.selectedAmountDays = ko.observable("");
+    
     this.courses = ko.observableArray([]);
-    this.freeText = ko.observable("");
+    
     this.pdf = ko.observable("");
     
     
 
     this.StartBtn = function () {
-        var JsUser = ko.toJS(this.UserName);
+        var JsUser = sessionStorage.getItem("UserName");
         var JsPName = ko.toJS(this.PName);
         var JsFName = ko.toJS(this.FName);
         var JsselectedLocation = ko.toJS(this.Location);
         var JsselectedReserch = ko.toJS(this.selectedReserch);
-        var JsfreeDays = ko.toJS(this.freeDays);
+        var JsProjectOptions = ko.toJS(this.ProjectOptions);
+        var JsselectedGroup = ko.toJS(this.selectedGroup);
+
         var JscodeLang = ko.toJS(this.codeLang);
-        var JsselectedAmountDays = ko.toJS(this.selectedAmountDays);
+        
         var Jstechnology = ko.toJS(this.courses);
-        var JsfreeText = ko.toJS(this.freeText);
+       
         var Jspdf = ko.toJS(this.pdf);
         var Jsemail = sessionStorage.getItem("Email");
         var Jspassword = sessionStorage.getItem("Password");
@@ -41,15 +45,13 @@ function AppViewModel() {
             "UserName": JsUser,
             "Password": Jspassword,
             "Email": Jsemail,
-            "FirstName": JsPName,
-            "LastName": JsFName,
+            "PName": JsPName,
             "Location": JsselectedLocation,
             "FieldOfProject": JsselectedReserch,
-            "FreeDays": JsfreeDays,
+            "KindOfProject":JsProjectOptions,
             "ProgrammingLanguage": JscodeLang,
-            "AmountOfDays": JsselectedAmountDays,
             "Technology": Jstechnology,
-            "ProjectDescription": JsfreeText,
+            "GroupSize": JsselectedGroup,
             "ProjectDescriptionFile": Jspdf,
         };
 

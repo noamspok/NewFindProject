@@ -20,5 +20,7 @@ namespace FinedProjectApp.Models
         }
 
         public System.Data.Entity.DbSet<ProjectDirec> ProjectDirecs { get; set; }
+
+        public System.Data.Entity.DbSet<FinedProjectApp.Models.StudentPref> StudentPrefs { get; set; }
     }
 }
