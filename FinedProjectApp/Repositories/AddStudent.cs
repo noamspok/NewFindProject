@@ -12,7 +12,7 @@ namespace FinedProjectApp.Repositories
         public static bool AddStudents(Student stud )
         {
             
-            var connectionstring = @"Data Source =(LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\noamspok\Source\Repos\FinedProjectApp\FinedProjectApp\App_Data\Database1.mdf; Integrated Security = True";
+            var connectionstring = @"Data Source =(LocalDB)\MSSQLLocalDB;AttachDbFilename = |DataDirectory|\Database1.mdf; Integrated Security = True";
             var query = "INSERT INTO Student (UserName,Password,E_mail,first_Name,Last_Name,Id) VALUES ('@UserName','@Password','@E_mail','@first_Name','@Last_Name','@Id') ";
             query= query.Replace("@UserName",stud.UserName).Replace("@Password",stud.Password).
                 Replace("@E_mail",stud.Email).Replace("@first_Name",stud.FirstName)
