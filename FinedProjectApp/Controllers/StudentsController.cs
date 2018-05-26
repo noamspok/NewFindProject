@@ -31,7 +31,7 @@ namespace FinedProjectApp.Controllers
             {
                 return NotFound();
             }
-
+            
             return Ok(student);
         }
 
