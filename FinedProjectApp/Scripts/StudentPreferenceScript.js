@@ -18,7 +18,7 @@ function AppViewModel() {
     this.Location = ko.observableArray([]);
 
     this.SubmitBtn = function () {
-        var JsUser = "1";
+        var JsUser = "3";
         var JsselectedReserch = ko.toJS(this.selectedReserch);
         var JsselectedLocation = ko.toJS(this.Location);
         var JsselectedGroup = ko.toJS(this.selectedGroup);
@@ -30,8 +30,8 @@ function AppViewModel() {
             "FieldOfProject": JsselectedReserch,
             "Location": JsselectedLocation,
             "GroupSize": JsselectedGroup,
-            "KindOfProject": JsProjectOptions,
-            "FavoriteLang": JsFavoriteLang,
+            "KindOfProject": JSON.stringify(JsProjectOptions),
+            "FavoriteLang": JSON.stringify(JsFavoriteLang),
             
         };
         var apiUrl = "../api/StudentPrefs";
