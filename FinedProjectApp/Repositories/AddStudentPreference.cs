@@ -11,7 +11,7 @@ namespace FinedProjectApp.Repositories
     {
         public static bool AddStudentsPref(StudentPref studP)
         {
-
+        
             var connectionstring = @"Data Source =(LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\noamspok\Source\Repos\FinedProjectApp\FinedProjectApp\App_Data\Database1.mdf; Integrated Security = True";
             var query = "INSERT INTO StudentPref (UserName,FavoriteLang,Location,GroupSize,KindOfProject,FieldOfProject) VALUES ('@UserName','@FavoriteLang','@Location','@GroupSize','@KindOfProject','@FieldOfProject') ";
             query = query.Replace("@UserName", studP.UserName).Replace("@FavoriteLang", studP.FavoriteLang).
