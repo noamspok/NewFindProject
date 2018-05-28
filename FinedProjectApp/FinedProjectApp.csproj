@@ -159,7 +159,6 @@
     <Content Include="Scripts\transition.js" />
     <Content Include="Tables\Database1.mdf" />
     <Content Include="Tables\Database1_log.ldf" />
-    <Content Include="View\DirectorsProjects.html" />
     <Content Include="View\ProjectDirector.html" />
     <Content Include="View\Register.html" />
     <Content Include="View\Student.html" />

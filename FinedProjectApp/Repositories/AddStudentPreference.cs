@@ -13,7 +13,7 @@ namespace FinedProjectApp.Repositories
         {
         
             var connectionstring = @"Data Source =(LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\Database1.mdf; Integrated Security = True";
-            var query = "INSERT INTO StudentPref ('@cols') VALUES ('@values') ";
+            var query = "INSERT INTO StudentPref (@cols) VALUES (@values) ";
             query = query.Replace("@cols",Cols).Replace("@values",Values);
             SqlConnection connection = new SqlConnection(connectionstring);
             try

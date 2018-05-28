@@ -29,16 +29,16 @@ namespace FinedProjectApp.Moderators
        public static bool SetStudentPref(StudentPref studP)
         {
             SetStudent(studP);
-            String pref="UserName,'@g','@L','@K','@FL','@F'";
-            pref.Replace("@g", studP.GroupSize);//.Replace("@K", studP.KindOfProject).Replace("@L", studP.Location).Replace("@FL", studP.FavoriteLang).Replace("@F", studP.FieldOfProject);
+            String pref="UserName,";
+            pref+=studP.GroupSize+','+ studP.KindOfProject+','+ studP.Location+',' + studP.FavoriteLang+',' + studP.FieldOfProject;
             string fives="";
             for (int i = 0; i < pref.Length; i++)
             {
                 if (pref[i] == ',')
                     fives += ",5";
             }
-            String values=studP.UserName+"'@5'";
-            values.Replace("@5", fives);
+            String values=studP.UserName;
+            values+=fives;
             
 
             return AddStudentPreference.AddStudentsPref(pref,values);
