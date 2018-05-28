@@ -8,22 +8,14 @@ namespace FinedProjectApp.Models
 {
     public class StudentPref
     {
-        private string fieldOfProject;
+        
         //student's profile nickname.
         [Key]
         public string UserName { get; set; }
         
         //student preference in fild of project: industry/ reserch 
         [Required]
-        public string FieldOfProject { get { return fieldOfProject; }
-            set {
-                if (value == "תעשיה")
-                    fieldOfProject = "industry";
-                else
-                    fieldOfProject = "research";
-            }
-        }
-
+        public string FieldOfProject { get; set; }       
         //student preference in field of project: AI,machine learning etc..
         [Required] 
         public string KindOfProject { get; set; }

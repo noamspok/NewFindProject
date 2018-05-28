@@ -8,7 +8,7 @@ function AppViewModel() {
     var that = this;
     
     this.reserchOptions = ko.observableArray(["תעשיה", "מחקר", "לא משנה"]);
-    this.GroupOptions = ko.observableArray(["1", "2", "3", "4"]);
+    this.GroupOptions = ko.observableArray(["1", "2", "3", "4","לא משנה"]);
     this.selectedReserch = ko.observable("");
     this.ProjectOptions = ko.observableArray([]);
     this.selectedGroup = ko.observable("");
@@ -28,7 +28,7 @@ function AppViewModel() {
         var JsonData = {
             "UserName": JsUser,
             "FieldOfProject": JsselectedReserch,
-            "Location": JsselectedLocation,
+            "Location": JSON.stringify(JsselectedLocation),
             "GroupSize": JsselectedGroup,
             "KindOfProject": JSON.stringify(JsProjectOptions),
             "FavoriteLang": JSON.stringify(JsFavoriteLang),

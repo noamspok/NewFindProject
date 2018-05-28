@@ -44,8 +44,8 @@ function AppViewModel() {
             "LastName": JsFName,
             "Id": JsIdNum,
             "Average": JsAvg,
-            "Courses": Jscourses,
-            "ProgrammingLanguage": JscodeLang,
+            "Courses": JSON.stringify(Jscourses),
+            "ProgrammingLanguage": JSON.stringify(JscodeLang),
             
         };
         var apiUrl = "../api/Students";
