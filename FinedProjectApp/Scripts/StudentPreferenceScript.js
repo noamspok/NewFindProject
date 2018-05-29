@@ -37,6 +37,7 @@ function AppViewModel() {
         var apiUrl = "../api/StudentPrefs";
         $.post(apiUrl, JsonData).done(function (item) {
             alert("Preferences registered successfully");
+            location.replace("../View/SampleProjects.html");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
             if (errorThrown == "BadRequest") {
