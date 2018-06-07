@@ -1,0 +1,65 @@
+﻿<html lang="en">
+<head>
+
+
+	<link href="../Content/css/bootstrap-rtl.css" rel="stylesheet" />
+	<meta charset="utf-8">
+	<title>Sign in</title>
+
+</head>
+
+<body style="background-color:powderblue">
+	<div class="container">
+		<h1 dir="rtl" class="form-signin-heading">כניסה</h1>
+		<br />
+		<div class="row">
+			<label for="UserName" class="sr-only">שם משתמש</label>
+			<<div class="col-md-3">
+				<input type="text" class="form-control" data-bind="value:UserName, valueUpdate: 'keyup'"
+					   placeholder=" שם משתמש" />
+				<span data-bind='visible: UserName.hasError, text: UserName.validationMessage'> </span>
+				<br />
+			</div>
+			<div class="col-md-7">
+
+			</div>
+		</div>
+		<div class="row">
+			<label for="inputPassword" class="sr-only">סיסמא</label>
+			<div class="col-md-3">
+				<input type="text" class="form-control" data-bind="value:UserName, valueUpdate: 'keyup'"
+					   placeholder=" שם משתמש" />
+				<span data-bind='visible: UserName.hasError, text: UserName.validationMessage'> </span>
+				<br />
+			</div>
+			<div class="col-md-7">
+
+			</div>
+		</div>
+		<br />
+		<div class="form-group">
+
+			<label class="col-sm-1 control-label  text-left">
+				<br />
+				תפקיד:
+			</label>
+			<div>
+				<br />
+				<select class="btn btn-default text-center" data-bind=" options: Options,optionsCaption: 'בחר/י',value: selected"></select>
+			</div>
+			<br />
+			<br />
+		</div>
+		<button class="btn btn-default text-center" data-bind="click: RegBtn">כניסה</button>
+
+		<br />
+		<br />
+		<a href="Register.html">הירשם כמשתמש חדש</a>
+		<script src="../Scripts/jquery-3.2.1.js"></script>
+		<script src="../Scripts/bootstrap-rtl.js"></script>
+		<script src="../Scripts/knockout-3.4.2.js"></script>
+		<script src="../Scripts/knockout.validation.js"></script>
+		<script src="../Scripts/SignInScript.js"></script>
+	</div>
+</body>
+</html>

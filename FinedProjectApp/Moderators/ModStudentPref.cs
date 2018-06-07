@@ -10,39 +10,52 @@ namespace FinedProjectApp.Moderators
 {
     public class ModStudentPref
     {
-       private static String Parser(String s)
-        {
-            return s.Replace("\"", "").Replace("[", "").Replace("]", "");
-        }
-
-        
-
-        private static void SetStudent(StudentPref stud )
-        {
-            stud.FavoriteLang= Parser(stud.FavoriteLang);
-            stud.Location = Parser(stud.Location);
-            stud.KindOfProject= Parser(stud.KindOfProject);
-            stud.FieldOfProject = stud.FieldOfProject.Replace("תעשיה", "Industry").Replace("מחקר", "Research").Replace("לא משנה", "Industry,Research");
-            stud.GroupSize = stud.GroupSize.Replace("4", "GroupSize_4").Replace("3", "GroupSize_3").Replace("2", "GroupSize_2").Replace("1", "GroupSize_1")
-                .Replace("לא משנה", "GroupSize_4,GroupSize_3,GroupSize_2,GroupSize_1");
-        }
+       
        public static bool SetStudentPref(StudentPref studP)
         {
-            SetStudent(studP);
+			ParseStudentPref(studP);
             String pref="UserName,";
-            pref+=studP.GroupSize+','+ studP.KindOfProject+','+ studP.Location+',' + studP.FavoriteLang+',' + studP.FieldOfProject;
-            string fives="";
-            for (int i = 0; i < pref.Length; i++)
-            {
-                if (pref[i] == ',')
-                    fives += ",5";
-            }
-            String values=studP.UserName;
-            values+=fives;
-            
-
-            return AddStudentPreference.AddStudentsPref(pref,values);
+            pref+=studP.GroupSize+','+ studP.Location+',' + studP.FieldOfProject;
+			String values = studP.UserName + SetValueString(pref);
+			string kindcols = "UserName," + studP.KindOfProject;
+			String kindvalues = studP.UserName + SetValueString(studP.KindOfProject);
+			string langcols = "UserName," + studP.FavoriteLang;
+			String langvalues = studP.UserName + SetValueString(studP.FavoriteLang);
+			return (AddStudentPreference.AddStudentsPref(pref,values)
+				&& AddStudentPreference.AddStudentsPrefKind(kindcols,kindvalues)
+				&& AddStudentPreference.AddStudentsPrefLang(langcols,langvalues)
+				);
         }
 
-    }
+		private static String Parser(String s)
+		{
+			return s.Replace("\"", "").Replace("[", "").Replace("]", "");
+		}
+
+
+
+		private static void ParseStudentPref(StudentPref stud)
+		{
+			stud.FavoriteLang = Parser(stud.FavoriteLang);
+			stud.Location = Parser(stud.Location);
+			stud.KindOfProject = Parser(stud.KindOfProject);
+			stud.FieldOfProject = stud.FieldOfProject.Replace("תעשיה", "Industry").Replace("מחקר", "Research").Replace("לא משנה", "Industry,Research");
+			stud.GroupSize = stud.GroupSize.Replace("4", "GroupSize_4").Replace("3", "GroupSize_3").Replace("2", "GroupSize_2").Replace("1", "GroupSize_1")
+				.Replace("לא משנה", "GroupSize_4,GroupSize_3,GroupSize_2,GroupSize_1");
+		}
+
+		private static String SetValueString(String var)
+		{
+			string fives = "";
+			for (int i = 0; i < var.Length; i++)
+			{
+				if (var[i] == ',')
+					fives += ",5";
+			}
+
+			return fives;
+
+		}
+
+	}
 }

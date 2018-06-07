@@ -75,7 +75,7 @@ namespace FinedProjectApp.Controllers
         [HttpPost()]
         public void PostStudent(Student student)
         {
-            if (!Repositories.AddStudent.AddStudents(student))
+            if (!Moderators.ModStudent.SetStudent(student))
             { 
 
              throw new HttpResponseException(HttpStatusCode.BadRequest);
