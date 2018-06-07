@@ -74,7 +74,7 @@ namespace FinedProjectApp.Controllers
         [ResponseType(typeof(StudentPref))]
         public void PostStudentPref(StudentPref studentPref)
         {
-            if (!Repositories.AddStudentPreference.AddStudentsPref(studentPref))
+            if (!Moderators.ModStudentPref.SetStudentPref(studentPref))
             {
 
                 throw new HttpResponseException(HttpStatusCode.BadRequest);

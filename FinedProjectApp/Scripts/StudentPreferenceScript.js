@@ -8,7 +8,7 @@ function AppViewModel() {
     var that = this;
     
     this.reserchOptions = ko.observableArray(["תעשיה", "מחקר", "לא משנה"]);
-    this.GroupOptions = ko.observableArray(["1", "2", "3", "4"]);
+    this.GroupOptions = ko.observableArray(["1", "2", "3", "4","לא משנה"]);
     this.selectedReserch = ko.observable("");
     this.ProjectOptions = ko.observableArray([]);
     this.selectedGroup = ko.observable("");
@@ -18,7 +18,7 @@ function AppViewModel() {
     this.Location = ko.observableArray([]);
 
     this.SubmitBtn = function () {
-        var JsUser = "1";
+        var JsUser = "3";
         var JsselectedReserch = ko.toJS(this.selectedReserch);
         var JsselectedLocation = ko.toJS(this.Location);
         var JsselectedGroup = ko.toJS(this.selectedGroup);
@@ -28,15 +28,16 @@ function AppViewModel() {
         var JsonData = {
             "UserName": JsUser,
             "FieldOfProject": JsselectedReserch,
-            "Location": JsselectedLocation,
+            "Location": JSON.stringify(JsselectedLocation),
             "GroupSize": JsselectedGroup,
-            "KindOfProject": JsProjectOptions,
-            "FavoriteLang": JsFavoriteLang,
+            "KindOfProject": JSON.stringify(JsProjectOptions),
+            "FavoriteLang": JSON.stringify(JsFavoriteLang),
             
         };
         var apiUrl = "../api/StudentPrefs";
         $.post(apiUrl, JsonData).done(function (item) {
             alert("Preferences registered successfully");
+            location.replace("../View/SampleProjects.html");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
             if (errorThrown == "BadRequest") {

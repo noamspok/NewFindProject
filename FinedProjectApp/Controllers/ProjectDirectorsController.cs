@@ -72,33 +72,15 @@ namespace FinedProjectApp.Controllers
 
         // POST: api/ProjectDirectors
         [ResponseType(typeof(ProjectDirec))]
-        public IHttpActionResult PostProjectDirec(ProjectDirec projectDirec)
+		[HttpPost()]
+		public void PostProjectDirec(ProjectDirec projectDirec)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+			if (!Moderators.ModDirector.SetDirector(projectDirec))
+			{
 
-            db.ProjectDirecs.Add(projectDirec);
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (ProjectDirecExists(projectDirec.UserName))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = projectDirec.UserName }, projectDirec);
-        }
+				throw new HttpResponseException(HttpStatusCode.BadRequest);
+			}
+		}
 
         // DELETE: api/ProjectDirectors/5
         [ResponseType(typeof(ProjectDirec))]

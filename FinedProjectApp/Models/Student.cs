@@ -47,6 +47,6 @@ namespace FinedProjectApp.Models
         [Required]
         public string ProgrammingLanguage { get; set; }
 
-        public void RegisterToSQL(Student stud) { }
+        
     }
 }

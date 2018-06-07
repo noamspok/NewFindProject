@@ -1,24 +1,31 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en">
+<html >
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     
    
     <link href="../Content/css/bootstrap-rtl.css" rel="stylesheet" />
     <title>
         Register
     </title>
+
+
 </head>
-<body style="background-color:powderblue">
+<body>
+
+   
+
+    
+
     <div class="container">
         <h1>הרשמה</h1>
         <br />
         <br />
         <br />
         <br />
+
         <div class="form-group">
             <div class="row">
                 <label for="Username" class="col-md-2 control-label text-left">שם משתמש: </label>
@@ -67,7 +74,7 @@
             <div class="row">
                 <label for="Email" class="col-md-2 control-label text-left">email: </label>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" data-bind="value:Email, valueUpdate: 'keyup'" 
+                    <input type="text" class="form-control" data-bind="value:Email, valueUpdate: 'keyup'"
                            placeholder=" Email" />
                     <span data-bind='visible: Email.hasError, text: Email.validationMessage'> </span>
                     <br />
@@ -77,8 +84,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+
+    </div>             
+    
+    <div class="container  ">
         <div class="form-group">
             
             <label class="col-sm-2 control-label  text-left">
@@ -94,7 +103,7 @@
         </div>
         <div class="col-sm-6"></div>
         <div class="col-sm-2">
-            <button type="button" class="btn btn-primary text-center" data-bind="click: RegBtn">הרשמה</button>
+            <button class="btn btn-default text-center"data-bind="click: RegBtn">הרשמה</button>
         </div>
     </div>
     <script src="../Scripts/jquery-3.2.1.js"></script>
