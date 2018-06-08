@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FinedProjectApp.Models;
+using System.Security.Cryptography;
 
 namespace FinedProjectApp.Controllers
 {
@@ -75,9 +76,12 @@ namespace FinedProjectApp.Controllers
         [HttpPost()]
         public void PostStudent(Student student)
         {
+            SHA1 hash = new SHA1CryptoServiceProvider();
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(student.Password);
+            byte[] compPass = hash.ComputeHash(pass);
+            student.Password = System.Text.Encoding.Default.GetString(compPass);
             if (!Moderators.ModStudent.SetStudent(student))
             { 
-
              throw new HttpResponseException(HttpStatusCode.BadRequest);
              }
         }
