@@ -18,9 +18,9 @@ namespace FinedProjectApp.Moderators
             pref+=studP.GroupSize+','+ studP.Location+',' + studP.FieldOfProject;
 			String values = studP.UserName + SetValueString(pref);
 			string kindcols = "UserName," + studP.KindOfProject;
-			String kindvalues = studP.UserName + SetValueString(studP.KindOfProject);
+			String kindvalues = studP.UserName + SetValueString(kindcols);
 			string langcols = "UserName," + studP.FavoriteLang;
-			String langvalues = studP.UserName + SetValueString(studP.FavoriteLang);
+			String langvalues = studP.UserName + SetValueString(langcols);
 			return (AddStudentPreference.AddStudentsPref(pref,values)
 				&& AddStudentPreference.AddStudentsPrefKind(kindcols,kindvalues)
 				&& AddStudentPreference.AddStudentsPrefLang(langcols,langvalues)

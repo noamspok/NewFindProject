@@ -21,7 +21,7 @@ function AppViewModel() {
     this.Location = ko.observableArray([]);
     
     this.StartBtn = function () {
-        var JsUser = sessionStorage.getItem("UserName");
+        var JsUser ="1"// sessionStorage.getItem("UserName");
         var JsIdNum = ko.toJS(this.IdNum);
         var JsPName = ko.toJS(this.PName);
         var JsFName = ko.toJS(this.FName);
@@ -33,8 +33,8 @@ function AppViewModel() {
         
         var Jscourses = ko.toJS(this.courses);
         var JscodeLang = ko.toJS(this.codeLang);
-        var Jsemail = sessionStorage.getItem("Email");
-        var Jspassword = sessionStorage.getItem("Password");
+        var Jsemail ="2" //sessionStorage.getItem("Email");
+        var Jspassword = "3"//sessionStorage.getItem("Password");
         
         var JsonData = {
             "UserName": JsUser,

@@ -44,7 +44,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO StudentPrefKind(@cols) VALUES('@values') ";
+					command.CommandText = "INSERT INTO StudentsPrefKind(@cols) VALUES(@values) ";
 					command.CommandText = command.CommandText.Replace("@cols", cols);
 					command.CommandText = command.CommandText.Replace("@values", values);
 					var rowsAffected = command.ExecuteNonQuery();
@@ -67,7 +67,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO StudentprefLanguage(@cols) VALUES('@values') ";
+					command.CommandText = "INSERT INTO StudentsprefLanguage(@cols) VALUES(@values) ";
 					command.CommandText = command.CommandText.Replace("@cols", cols);
 					command.CommandText = command.CommandText.Replace("@values", values);
 					var rowsAffected = command.ExecuteNonQuery();

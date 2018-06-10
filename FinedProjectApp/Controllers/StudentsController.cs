@@ -76,14 +76,14 @@ namespace FinedProjectApp.Controllers
         [HttpPost()]
         public void PostStudent(Student student)
         {
-            SHA1 hash = new SHA1CryptoServiceProvider();
+            /*SHA1 hash = new SHA1CryptoServiceProvider();
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(student.Password);
             byte[] compPass = hash.ComputeHash(pass);
-            student.Password = System.Text.Encoding.Default.GetString(compPass);
+            student.Password = System.Text.Encoding.Default.GetString(compPass);*/
             if (!Moderators.ModStudent.SetStudent(student))
-            { 
-             throw new HttpResponseException(HttpStatusCode.BadRequest);
-             }
+            {
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            }
         }
 
         // DELETE: api/Students/5

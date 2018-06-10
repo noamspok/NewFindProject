@@ -18,7 +18,7 @@ function AppViewModel() {
     this.Location = ko.observableArray([]);
 
     this.SubmitBtn = function () {
-        var JsUser = "3";
+        var JsUser = "1";
         var JsselectedReserch = ko.toJS(this.selectedReserch);
         var JsselectedLocation = ko.toJS(this.Location);
         var JsselectedGroup = ko.toJS(this.selectedGroup);

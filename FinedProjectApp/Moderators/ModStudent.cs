@@ -37,9 +37,9 @@ namespace FinedProjectApp.Moderators
 		{
 			ParseStudent(studP);
 			string coursescols = "UserName, " + studP.Courses;
-			string courseval = studP.UserName + (SetValueString(studP.Courses));
+			string courseval = studP.UserName + (SetValueString(coursescols));
 			string Langscols = "UserName, " + studP.ProgrammingLanguage;
-			string langval = studP.UserName + (SetValueString(studP.ProgrammingLanguage));
+			string langval = studP.UserName + (SetValueString(Langscols));
 			String values = studP.UserName;
 			return (AddStudent.AddStudents(studP)
 				&& AddStudent.AddStudentsCourses(coursescols,courseval) 

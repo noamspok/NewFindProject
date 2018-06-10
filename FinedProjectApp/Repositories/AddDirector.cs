@@ -22,11 +22,11 @@ namespace FinedProjectApp.Repositories
 
 					var command = connection.CreateCommand();
 					command.CommandText = "INSERT INTO Directors(UserName, Password, E_mail)" +
-						" VALUES('@UserName', '@Password', '@E_mail') ";
+						" VALUES(@UserName, @Password, @E_mail) ";
 
-					command.Parameters.Add("@UserName", SqlDbType.NVarChar).Value = stud.UserName;
-					command.Parameters.Add("@Password", SqlDbType.NVarChar).Value = stud.Password;
-					command.Parameters.Add("@E_mail", SqlDbType.NVarChar).Value = stud.Email;
+                    command.CommandText = command.CommandText.Replace("@UserName",stud.UserName);
+                    command.CommandText = command.CommandText.Replace("@Password", stud.Password);
+                    command.CommandText = command.CommandText.Replace("@E_mail", stud.Email);
 					var rowsAffected = command.ExecuteNonQuery();
 					return rowsAffected == 1;
 				}
@@ -48,7 +48,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO DirectorsCourses(@cols) VALUES('@values') ";
+					command.CommandText = "INSERT INTO DirectorsCourses(@cols) VALUES(@values) ";
 					command.CommandText = command.CommandText.Replace("@cols", cols);
 					command.CommandText = command.CommandText.Replace("@values", values);
 					var rowsAffected = command.ExecuteNonQuery();
@@ -71,7 +71,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO ProjectLang(@cols) VALUES('@values') ";
+					command.CommandText = "INSERT INTO ProjectLang(@cols) VALUES(@values) ";
 					command.CommandText = command.CommandText.Replace("@cols", cols);
 					command.CommandText = command.CommandText.Replace("@values", values);
 					var rowsAffected = command.ExecuteNonQuery();
@@ -94,7 +94,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO Projects(@cols) VALUES('@values') ";
+					command.CommandText = "INSERT INTO Projects(@cols) VALUES(@values) ";
 					command.CommandText = command.CommandText.Replace("@cols", cols);
 					command.CommandText = command.CommandText.Replace("@values", values);
 					var rowsAffected = command.ExecuteNonQuery();
@@ -117,7 +117,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO ProjectKind(@cols) VALUES('@values') ";
+					command.CommandText = "INSERT INTO ProjectKind(@cols) VALUES(@values) ";
 					command.CommandText = command.CommandText.Replace("@cols", cols);
 					command.CommandText = command.CommandText.Replace("@values", values);
 					var rowsAffected = command.ExecuteNonQuery();

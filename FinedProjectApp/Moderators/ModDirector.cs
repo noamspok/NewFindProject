@@ -14,19 +14,19 @@ namespace FinedProjectApp.Moderators
 		{
 			ParseDirector(direcP);
 			string coursescols = "ProjectName," + direcP.Courses;
-			string courseval = direcP.ProjectName + (SetValueString(direcP.Courses));
+			string courseval = direcP.ProjectName + (SetValueString(coursescols));
 			string Langscols = "ProjectName," + direcP.ProgrammingLanguage;
-			string langval = direcP.ProjectName + (SetValueString(direcP.ProgrammingLanguage));
+			string langval = direcP.ProjectName + (SetValueString(Langscols));
 			string kindscols = "ProjectName," + direcP.KindOfProject;
-			string kindval = direcP.ProjectName + (SetValueString(direcP.KindOfProject));
+			string kindval = direcP.ProjectName + (SetValueString(kindscols));
 			string projcol = "ProjectName, ProjectPath,";
 			string temp = "DirectorName, " + direcP.Location + "," + direcP.FieldOfProject + "," + direcP.GroupSize;
 			projcol += temp;
-			string projvalue = direcP.ProjectName + direcP.ProjectDescriptionFile + direcP.UserName + SetValueString(temp);
+			string projvalue = direcP.ProjectName + "," + direcP.ProjectDescriptionFile + "," + direcP.UserName + SetValueString(temp);
 			return (AddDirector.AddDirectors(direcP)
-				&& AddDirector.AddDirectorsCourses(coursescols, courseval)
+                && AddDirector.AddProject(projcol, projvalue)
+                && AddDirector.AddDirectorsCourses(coursescols, courseval)
 				&& AddDirector.AddDirectorLang(Langscols, langval)
-				&& AddDirector.AddProject(projcol, projvalue)
 				&& AddDirector.AddDProjectKind(kindscols, kindval)
 				);
 		}

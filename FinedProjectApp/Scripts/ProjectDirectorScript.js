@@ -25,7 +25,7 @@ function AppViewModel() {
     
 
     this.StartBtn = function () {
-        var JsUser = sessionStorage.getItem("UserName");
+        var JsUser = "1"//sessionStorage.getItem("UserName");
         var JsPName = ko.toJS(this.PName);
         var JsFName = ko.toJS(this.FName);
         var JsselectedLocation = ko.toJS(this.Location);
@@ -37,20 +37,20 @@ function AppViewModel() {
         
         var Jstechnology = ko.toJS(this.courses);
        
-        var Jspdf = ko.toJS(this.pdf);
-        var Jsemail = sessionStorage.getItem("Email");
-        var Jspassword = sessionStorage.getItem("Password");
+        var Jspdf = "3"//ko.toJS(this.pdf);
+        var Jsemail = "2"//sessionStorage.getItem("Email");
+        var Jspassword = "3"//sessionStorage.getItem("Password");
         
         var JsonData = {
             "UserName": JsUser,
             "Password": Jspassword,
             "Email": Jsemail,
-            "PName": JsPName,
+            "ProjectName": JsPName,
             "Location": JsselectedLocation,
             "FieldOfProject": JsselectedReserch,
             "KindOfProject":JsProjectOptions,
             "ProgrammingLanguage": JscodeLang,
-            "Technology": Jstechnology,
+            "Courses": Jstechnology,
             "GroupSize": JsselectedGroup,
             "ProjectDescriptionFile": Jspdf,
         };
@@ -71,10 +71,7 @@ function AppViewModel() {
 
     };
 
-    this.isFormValid = ko.computed(function () {
-
-        return this.UserName.isValid();
-    }, this);
+    
 }
 
 ko.applyBindings(AppViewModel);
