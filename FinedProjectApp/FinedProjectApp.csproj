@@ -201,13 +201,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Migrations\Configuration.cs" />
-    <Compile Include="Models\ProjectDirec.cs" />
-    <Compile Include="Models\ProjectDirectorsContext.cs" />
-    <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\StudentPref.cs" />
-    <Compile Include="Models\StudentsContext.cs" />
+    <Compile Include="Models\SampleProjects\IndustrySamples.cs" />
+    <Compile Include="Models\Users\ProjectDirec.cs" />
+    <Compile Include="Models\SampleProjects\ResearchSamples.cs" />
+    <Compile Include="Models\SampleProjects\SampleProject.cs" />
+    <Compile Include="Models\SampleProjects\SampleProjectResults.cs" />
+    <Compile Include="Models\SampleProjects\ISampleProjects.cs" />
+    <Compile Include="Models\Users\Student.cs" />
+    <Compile Include="Models\Users\StudentPref.cs" />
     <Compile Include="Moderators\ModDirector.cs" />
+    <Compile Include="Moderators\ModProject.cs" />
     <Compile Include="Moderators\ModStudent.cs" />
     <Compile Include="Moderators\ModStudentPref.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,7 +218,7 @@
     <Compile Include="Repositories\AddStudent.cs" />
     <Compile Include="Repositories\AddStudentPreference.cs" />
     <Compile Include="Repositories\SignInQuery.cs" />
-    <Compile Include="Repositories\UpdateKindOfProj.cs" />
+    <Compile Include="Repositories\UpdateFromProjectSamp.cs" />
     <Compile Include="Repositories\UpdateLanguage.cs" />
   </ItemGroup>
   <ItemGroup>
