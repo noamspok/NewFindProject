@@ -14,12 +14,11 @@ namespace FinedProjectApp.Controllers
 {
     public class ProjectDirectorsController : ApiController
     {
-        private ProjectDirectorsContext db = new ProjectDirectorsContext();
 
         // GET: api/ProjectDirectors
-        public IQueryable<ProjectDirec> GetProjectDirecs()
+       /* public IQueryable<ProjectDirec> GetProjectDirecs()
         {
-            return db.ProjectDirecs;
+            
         }
 
         // GET: api/ProjectDirectors/5
@@ -48,8 +47,7 @@ namespace FinedProjectApp.Controllers
             {
                 return BadRequest();
             }
-
-            db.Entry(projectDirec).State = EntityState.Modified;
+            
 
             try
             {
@@ -110,6 +108,6 @@ namespace FinedProjectApp.Controllers
         private bool ProjectDirecExists(string id)
         {
             return db.ProjectDirecs.Count(e => e.UserName == id) > 0;
-        }
+        }*/
     }
 }

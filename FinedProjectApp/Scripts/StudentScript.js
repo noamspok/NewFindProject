@@ -21,7 +21,7 @@ function AppViewModel() {
     this.Location = ko.observableArray([]);
     
     this.StartBtn = function () {
-        var JsUser ="1"// sessionStorage.getItem("UserName");
+        var JsUser = sessionStorage.getItem("UserName");
         var JsIdNum = ko.toJS(this.IdNum);
         var JsPName = ko.toJS(this.PName);
         var JsFName = ko.toJS(this.FName);
@@ -33,8 +33,8 @@ function AppViewModel() {
         
         var Jscourses = ko.toJS(this.courses);
         var JscodeLang = ko.toJS(this.codeLang);
-        var Jsemail ="2" //sessionStorage.getItem("Email");
-        var Jspassword = "3"//sessionStorage.getItem("Password");
+        var Jsemail = sessionStorage.getItem("Email");
+        var Jspassword = sessionStorage.getItem("Password");
         
         var JsonData = {
             "UserName": JsUser,
@@ -45,7 +45,7 @@ function AppViewModel() {
             "Id": JsIdNum,
             "Average": JsAvg,
             "Courses": JSON.stringify(Jscourses),
-            "ProgrammingLanguage": JSON.stringify(JscodeLang),
+            "ProgrammingLanguage": JSON.stringify(JscodeLang)
             
         };
         var apiUrl = "../api/Students";
@@ -54,7 +54,7 @@ function AppViewModel() {
             location.replace("../View/StudentPreference.html");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
-            if (errorThrown == "BadRequest") {
+            if (errorThrown === "BadRequest") {
                 alert('Wrong details');
             }
             else {

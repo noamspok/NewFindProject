@@ -14,10 +14,9 @@ namespace FinedProjectApp.Controllers
 {
     public class StudentPrefsController : ApiController
     {
-        private ProjectDirectorsContext db = new ProjectDirectorsContext();
 
         // GET: api/StudentPrefs
-        public IQueryable<StudentPref> GetStudentPrefs()
+        /*public IQueryable<StudentPref> GetStudentPrefs()
         {
             return db.StudentPrefs;
         }
@@ -109,6 +108,6 @@ namespace FinedProjectApp.Controllers
         private bool StudentPrefExists(string id)
         {
             return db.StudentPrefs.Count(e => e.UserName == id) > 0;
-        }
+        }*/
     }
 }

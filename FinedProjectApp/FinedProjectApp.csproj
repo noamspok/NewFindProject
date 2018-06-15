@@ -204,6 +204,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\SampleProjects\IndustrySamples.cs" />
+    <Compile Include="Models\SampleProjects\SampelCreater.cs" />
     <Compile Include="Models\Users\ProjectDirec.cs" />
     <Compile Include="Models\SampleProjects\ResearchSamples.cs" />
     <Compile Include="Models\SampleProjects\SampleProject.cs" />

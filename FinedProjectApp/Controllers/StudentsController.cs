@@ -15,9 +15,8 @@ namespace FinedProjectApp.Controllers
 {
     public class StudentsController : ApiController
     {
-        private StudentsContext db = new StudentsContext();
 
-        // GET: api/Students
+       /* // GET: api/Students
         public IQueryable<Student> GetStudents()
         {
             return db.Students;
@@ -69,7 +68,7 @@ namespace FinedProjectApp.Controllers
             }
 
             return StatusCode(HttpStatusCode.NoContent);
-        }
+        }*/
 
         // POST: api/Students
         [ResponseType(typeof(Student))]
@@ -86,7 +85,7 @@ namespace FinedProjectApp.Controllers
             }
         }
 
-        // DELETE: api/Students/5
+       /* // DELETE: api/Students/5
         [ResponseType(typeof(Student))]
         public IHttpActionResult DeleteStudent(int id)
         {
@@ -114,6 +113,6 @@ namespace FinedProjectApp.Controllers
         private bool StudentExists(int id)
         {
             return db.Students.Count(e => e.Id == id) > 0;
-        }
+        }*/
     }
 }
