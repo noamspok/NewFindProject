@@ -14,7 +14,7 @@ namespace FinedProjectApp.Controllers
 {
     public class StudentPrefsController : ApiController
     {
-
+	private Samples samp=new Samples();
         // GET: api/StudentPrefs
         public void GetStudentPrefs()
         {
@@ -29,10 +29,15 @@ namespace FinedProjectApp.Controllers
         }
 
         // PUT: api/StudentPrefs/5
-        [ResponseType(typeof(void))]
-        public void PutStudentPref(string id, StudentPref studentPref)
+       
+        public void PutSampleResults(SampleProjectResults samplesResult)
         {
-        }
+			if (!Moderators.ModSampleProject.UpdateTables(samp,samplesResult))
+			{
+
+				throw new HttpResponseException(HttpStatusCode.BadRequest);
+			}
+		}
 
         // POST: api/StudentPrefs
         [ResponseType(typeof(StudentPref))]

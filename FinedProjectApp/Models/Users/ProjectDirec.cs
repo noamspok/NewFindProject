@@ -18,13 +18,7 @@ namespace FinedProjectApp.Models
 		[Key]
 		public string UserName { get; set; }
 
-		//Project Director password
-		[Required]
-		public string Password { get; set; }
-
-		[Required]
-		public string Email { get; set; }
-		//Project Director first name
+		
 
 
 		/*
@@ -32,10 +26,7 @@ namespace FinedProjectApp.Models
 		 */
 
 
-		//Locations where Project Director is available for meating.
-		[Required]
-		public string Location { get; set; }
-
+		
 		//Project Director preference in fild of project: industry/ reserch 
 		[Required]
 		public string FieldOfProject { get; set; }

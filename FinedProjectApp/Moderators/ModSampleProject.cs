@@ -13,7 +13,7 @@ namespace FinedProjectApp.Moderators
 		public static bool UpdateTables(ISampleProjects samples, SampleProjectResults results)
 		{
 			int j = 0;
-			foreach (SampleProject sample in samples.Samples)
+			foreach (SampleProject sample in samples.SamplesList)
 			{
 
 				foreach (string s in sample.GetMembers())

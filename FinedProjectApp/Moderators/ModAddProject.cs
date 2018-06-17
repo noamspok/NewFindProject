@@ -20,7 +20,7 @@ namespace FinedProjectApp.Moderators
 			string kindscols = "ProjectName," + direcP.KindOfProject;
 			string kindval = direcP.ProjectName + (SetValueString(kindscols));
 			string projcol = "ProjectName, ProjectPath,";
-			string temp = "DirectorName, " + direcP.Location + "," + direcP.FieldOfProject + "," + direcP.GroupSize;
+			string temp = "DirectorName, "  + direcP.FieldOfProject + "," + direcP.GroupSize;
 			projcol += temp;
 			string projvalue = direcP.ProjectName + "," + direcP.ProjectDescriptionFile + "," + direcP.UserName + SetValueString(temp);
 			return ( AddDirector.AddProject(projcol, projvalue)
@@ -51,7 +51,6 @@ namespace FinedProjectApp.Moderators
 		private static void ParseDirector(ProjectDirec direc)
 		{
 			direc.ProgrammingLanguage = Parser(direc.ProgrammingLanguage);
-			direc.Location = Parser(direc.Location);
 			direc.Courses = Parser(direc.Courses);
 			direc.KindOfProject = Parser(direc.KindOfProject);
 			direc.FieldOfProject = direc.FieldOfProject.Replace("תעשיה", "Industry").

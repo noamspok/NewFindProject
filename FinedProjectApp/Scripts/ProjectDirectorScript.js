@@ -15,7 +15,7 @@ function AppViewModel() {
     this.selectedGroup = ko.observable("");  
 
     this.selectedReserch = ko.observable("");
-    this.Location = ko.observableArray([]);
+ 
     this.codeLang = ko.observableArray([]);
     
     this.courses = ko.observableArray([]);
@@ -25,10 +25,10 @@ function AppViewModel() {
     
 
     this.StartBtn = function () {
-        var JsUser = "1"//sessionStorage.getItem("UserName");
+        var JsUser = sessionStorage.getItem("UserName");
         var JsPName = ko.toJS(this.PName);
         var JsFName = ko.toJS(this.FName);
-        var JsselectedLocation = ko.toJS(this.Location);
+        
         var JsselectedReserch = ko.toJS(this.selectedReserch);
         var JsProjectOptions = ko.toJS(this.ProjectOptions);
         var JsselectedGroup = ko.toJS(this.selectedGroup);
@@ -38,15 +38,14 @@ function AppViewModel() {
         var Jstechnology = ko.toJS(this.courses);
        
         var Jspdf = "3"//ko.toJS(this.pdf);
-        var Jsemail = "2"//sessionStorage.getItem("Email");
-        var Jspassword = "3"//sessionStorage.getItem("Password");
+        var Jsemail = sessionStorage.getItem("Email");
+        var Jspassword = sessionStorage.getItem("Password");
         
         var JsonData = {
             "UserName": JsUser,
             "Password": Jspassword,
             "Email": Jsemail,
             "ProjectName": JsPName,
-            "Location": JsselectedLocation,
             "FieldOfProject": JsselectedReserch,
             "KindOfProject":JsProjectOptions,
             "ProgrammingLanguage": JscodeLang,

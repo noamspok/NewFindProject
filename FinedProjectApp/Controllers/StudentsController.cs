@@ -22,15 +22,22 @@ namespace FinedProjectApp.Controllers
            
         }
 
-        // GET: api/Students/5
-        [ResponseType(typeof(Student))]
-        public void GetStudent(int id)
-        {
-            
-        }
+		[HttpGet()]
+		public void GetStudent(string name, string password)
+		{
+			var message = Repositories.SignInQuery.SignIn(name, password);
+			if (message == "ok")
+				return;
+			var response = new HttpResponseMessage()
+			{
+				StatusCode = HttpStatusCode.BadRequest,
+				ReasonPhrase = message
+			};
+			throw new HttpResponseException(response);
+		}
 
-        // PUT: api/Students/5
-        [ResponseType(typeof(void))]
+		// PUT: api/Students/5
+		[ResponseType(typeof(void))]
         public void PutStudent(int id, Student student)
         {
             

@@ -15,7 +15,7 @@ function AppViewModel() {
     this.selectedLang = ko.observable("");
     this.codeLang = ko.observableArray([]);
 
-    this.Location = ko.observableArray([]);
+    
 
     this.SubmitBtn = function () {
         var JsUser = sessionStorage.getItem("UserName");
@@ -28,7 +28,6 @@ function AppViewModel() {
         var JsonData = {
             "UserName": JsUser,
             "FieldOfProject": JsselectedReserch,
-            "Location": JSON.stringify(JsselectedLocation),
             "GroupSize": JsselectedGroup,
             "KindOfProject": JSON.stringify(JsProjectOptions),
             "FavoriteLang": JSON.stringify(JsFavoriteLang),

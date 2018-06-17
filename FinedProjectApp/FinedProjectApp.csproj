@@ -104,8 +104,8 @@
     <Content Include="Content\css\bootstrap-rtl.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\affix.js" />
-    <Content Include="Scripts\alert.js" />
+    <Content Include="Scripts\packages\affix.js" />
+    <Content Include="Scripts\packages\alert.js" />
     <Content Include="files\research\Projects1.docx" />
     <Content Include="files\research\Projects2.docx" />
     <Content Include="files\research\Yani.pdf" />
@@ -124,24 +124,24 @@
     <Content Include="files\industry\Radware.docx" />
     <Content Include="files\industry\wisenet.docx" />
     <Content Include="files\industry\wizebox.docx" />
-    <Content Include="Scripts\bootstrap-rtl.js" />
-    <Content Include="Scripts\bootstrap-rtl.min.js" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\esm\popper-utils.js" />
-    <Content Include="Scripts\esm\popper-utils.min.js" />
-    <Content Include="Scripts\esm\popper.js" />
-    <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\esm\popper.min.js.map" />
-    <Content Include="Scripts\esm\popper.js.map" />
-    <Content Include="Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\packages\bootstrap-rtl.js" />
+    <Content Include="Scripts\packages\bootstrap-rtl.min.js" />
+    <Content Include="Scripts\packages\bootstrap.bundle.js" />
+    <Content Include="Scripts\packages\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\packages\bootstrap.js" />
+    <Content Include="Scripts\packages\bootstrap.min.js" />
+    <Content Include="Scripts\packages\esm\popper-utils.js" />
+    <Content Include="Scripts\packages\esm\popper-utils.min.js" />
+    <Content Include="Scripts\packages\esm\popper.js" />
+    <Content Include="Scripts\packages\esm\popper.min.js" />
+    <Content Include="Scripts\packages\esm\popper.min.js.map" />
+    <Content Include="Scripts\packages\esm\popper.js.map" />
+    <Content Include="Scripts\packages\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\packages\esm\popper-utils.js.map" />
+    <Content Include="Scripts\packages\bootstrap.min.js.map" />
+    <Content Include="Scripts\packages\bootstrap.js.map" />
+    <Content Include="Scripts\packages\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\packages\bootstrap.bundle.js.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-reboot.min.css.map" />
@@ -151,40 +151,40 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
-    <Content Include="Scripts\button.js" />
-    <Content Include="Scripts\carousel-rtl.js" />
-    <Content Include="Scripts\collapse.js" />
+    <None Include="Scripts\packages\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\packages\button.js" />
+    <Content Include="Scripts\packages\carousel-rtl.js" />
+    <Content Include="Scripts\packages\collapse.js" />
     <Content Include="Scripts\DirectorsProjects.js" />
-    <Content Include="Scripts\dropdown.js" />
-    <Content Include="Scripts\jquery-3.2.1.js" />
-    <Content Include="Scripts\jquery-3.2.1.min.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
-    <Content Include="Scripts\knockout-3.4.2.debug.js" />
-    <Content Include="Scripts\knockout-3.4.2.js" />
-    <Content Include="Scripts\knockout.validation.js" />
-    <Content Include="Scripts\knockout.validation.min.js" />
-    <Content Include="Scripts\modal.js" />
-    <Content Include="Scripts\popover.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\packages\dropdown.js" />
+    <Content Include="Scripts\packages\jquery-3.2.1.js" />
+    <Content Include="Scripts\packages\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\packages\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\packages\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\packages\knockout-3.4.2.debug.js" />
+    <Content Include="Scripts\packages\knockout-3.4.2.js" />
+    <Content Include="Scripts\packages\knockout.validation.js" />
+    <Content Include="Scripts\packages\knockout.validation.min.js" />
+    <Content Include="Scripts\packages\modal.js" />
+    <Content Include="Scripts\packages\popover.js" />
+    <Content Include="Scripts\packages\popper-utils.js" />
+    <Content Include="Scripts\packages\popper-utils.min.js" />
+    <Content Include="Scripts\packages\popper.js" />
+    <Content Include="Scripts\packages\popper.min.js" />
     <Content Include="Scripts\ProjectDirectorScript.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\SampleProjectsScript.js" />
-    <Content Include="Scripts\scrollspy.js" />
+    <Content Include="Scripts\packages\scrollspy.js" />
     <Content Include="Scripts\SignInScript.js" />
     <Content Include="Scripts\StudentPreferenceScript.js" />
     <Content Include="Scripts\StudentScript.js" />
-    <Content Include="Scripts\tab.js" />
-    <Content Include="Scripts\tooltip.js" />
-    <Content Include="Scripts\transition.js" />
-    <Content Include="Scripts\umd\popper-utils.js" />
-    <Content Include="Scripts\umd\popper-utils.min.js" />
-    <Content Include="Scripts\umd\popper.js" />
-    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\packages\tab.js" />
+    <Content Include="Scripts\packages\tooltip.js" />
+    <Content Include="Scripts\packages\transition.js" />
+    <Content Include="Scripts\packages\umd\popper-utils.js" />
+    <Content Include="Scripts\packages\umd\popper-utils.min.js" />
+    <Content Include="Scripts\packages\umd\popper.js" />
+    <Content Include="Scripts\packages\umd\popper.min.js" />
     <Content Include="Scripts\WelcomeScript.js" />
     <Content Include="View\ProjectDirector.html" />
     <Content Include="View\Register.html" />
@@ -203,10 +203,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\SampleProjects\IndustrySamples.cs" />
-    <Compile Include="Models\SampleProjects\SampelCreater.cs" />
     <Compile Include="Models\Users\ProjectDirec.cs" />
-    <Compile Include="Models\SampleProjects\ResearchSamples.cs" />
+    <Compile Include="Models\SampleProjects\Samples.cs" />
     <Compile Include="Models\SampleProjects\SampleProject.cs" />
     <Compile Include="Models\SampleProjects\SampleProjectResults.cs" />
     <Compile Include="Models\SampleProjects\ISampleProjects.cs" />
@@ -226,18 +224,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Scripts\knockout.validation.min.js.map" />
-    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.2.1.min.map" />
-    <Content Include="Scripts\umd\popper.min.js.map" />
-    <Content Include="Scripts\umd\popper.js.map" />
-    <Content Include="Scripts\umd\popper-utils.min.js.map" />
-    <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
-    <Content Include="Scripts\popper.min.js.map" />
-    <Content Include="Scripts\popper.js.map" />
-    <Content Include="Scripts\popper-utils.min.js.map" />
-    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\packages\knockout.validation.min.js.map" />
+    <Content Include="Scripts\packages\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\packages\jquery-3.2.1.min.map" />
+    <Content Include="Scripts\packages\umd\popper.min.js.map" />
+    <Content Include="Scripts\packages\umd\popper.js.map" />
+    <Content Include="Scripts\packages\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\packages\umd\popper-utils.js.map" />
+    <Content Include="Scripts\packages\README.md" />
+    <Content Include="Scripts\packages\popper.min.js.map" />
+    <Content Include="Scripts\packages\popper.js.map" />
+    <Content Include="Scripts\packages\popper-utils.min.js.map" />
+    <Content Include="Scripts\packages\popper-utils.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -246,7 +244,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\packages\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

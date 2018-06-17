@@ -14,7 +14,23 @@ namespace FinedProjectApp
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
+
+			config.Routes.MapHttpRoute(
+				name: "DirecrRegisterApi",
+				routeTemplate: "api/{controller}/{username}/{password}/{e_mail}",
+				defaults: new { controller = "ProjectDirectors" }
+			);
+			config.Routes.MapHttpRoute(
+				name: "DirecSignInApi",
+				routeTemplate: "api/{controller}/{username}/{password}",
+				defaults: new { controller = "ProjectDirectors" }
+			);
+			config.Routes.MapHttpRoute(
+				name: "StudentSignInApi",
+				routeTemplate: "api/{controller}/{username}/{password}",
+				defaults: new { controller = "students" }
+			);
+			config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }

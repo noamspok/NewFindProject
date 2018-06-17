@@ -22,19 +22,43 @@ function AppViewModel() {
     this.Options = ko.observableArray(["student", "project manager"]);
     this.selected = ko.observable("");
     this.RegBtn = function () {
-        var JsUser = ko.toJS(this.UserName);
-        var JsPass = ko.toJS(this.Password);
-        var JsEmail = ko.toJS(this.Email);
-        
+
+
         sessionStorage.UserName = ko.toJS(that.UserName);
-        sessionStorage.Password = ko.toJS(that.Password);
-        sessionStorage.Email = ko.toJS(that.Email);
+
         if (ko.toJS(this.selected) === "student") {
+            sessionStorage.Password = ko.toJS(that.Password);
+            sessionStorage.Email = ko.toJS(that.Email);
             location.replace("../View/Student.html");
         } else {
-            location.replace("../View/ProjectDirector.html");
-        }
-    };
+            var JsUser = ko.toJS(this.UserName);
+            var JsPass = ko.toJS(this.Password);
+            var JsEmail = ko.toJS(this.Email);
+            var JsonData = {
+                "username": JsUser,
+                "password": JsPass,
+                "e_mail": JsEmail,
+
+            };
+
+            var apiUrl = "../api/ProjectDirectors/" + JsUser +"/" + JsPass + "/" + JsEmail;
+            $.post(apiUrl, JsonData).done(function (item) {
+                alert("User registered successfully");
+                location.replace("../View/ProjectDirector.html");
+            }).fail(function (jqXHR, status, errorThrown) {
+                // if wrong arguments
+                if (errorThrown === "BadRequest") {
+                    alert('Wrong details');
+                }
+                else {
+                    alert('Failed to send request to server');
+                }
+
+            });
+
+        };
+
+    }
 
     this.isFormValid = ko.computed(function () {
 

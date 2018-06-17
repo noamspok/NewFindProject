@@ -12,28 +12,25 @@ function AppViewModel() {
         var JsPass = ko.toJS(this.Password);
         var JsonData = {
             "UserName": JsUser,
-            "password": Jspassword,
+            "password": JsPass,
         };
         var apiUrl = "";
         if (ko.toJS(this.selected) == "student") {
-            apiUrl = "../api/StudentSignIn";
+            apiUrl = "../api/GetStudent/" + JsUser + "/" + JsPass ;
         }
         else
-            apiUrl = "../api/DirectorSignIn";
-        $.post(apiUrl, JsonData).done(function (item) {
-            alert("User registered successfully");
+            apiUrl = "../api/GetDirector/" + JsUser + "/" + JsPass ;
+        $.Get(apiUrl, JsonData).done(function (item) {
+            alert("User signed in successfully");
             if (ko.toJS(this.selected) == "student") {
                 location.replace("../View/StudentPreference.html");
             }
             location.replace("../View/ProjectDirector.html");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
-            if (errorThrown == "BadRequest") {
-                alert('Wrong details');
-            }
-            else {
-                alert('Failed to send request to server');
-            }
+           
+                alert(errorThrown);
+           
 
         });
     }; 

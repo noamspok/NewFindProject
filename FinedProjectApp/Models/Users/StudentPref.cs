@@ -24,9 +24,7 @@ namespace FinedProjectApp.Models
         [Required]
         public string GroupSize { get; set; }
 
-        //student preference of location:  University/outside 
-        [Required]
-        public string Location { get; set; }
+       
         //student preference of location:  University/outside 
         [Required]
         public string FavoriteLang { get; set; }

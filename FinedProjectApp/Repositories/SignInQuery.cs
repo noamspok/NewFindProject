@@ -10,7 +10,7 @@ namespace FinedProjectApp.Repositories
     public class SignInQuery
     {
         private const string connectionString = @"Data Source =(LocalDB)\MSSQLLocalDB;AttachDbFilename = |DataDirectory|\Database1.mdf; Integrated Security = True";
-        public static bool SignIn(String username, String password)
+        public static string SignIn(String username, String password)
         {
 
 			try
@@ -21,25 +21,62 @@ namespace FinedProjectApp.Repositories
 
                 var command = connection.CreateCommand();
                 command.CommandText = "Select Password FROM Student WHERE UserName=@UserName ";
-                command.Parameters.Add("@UserName", SqlDbType.NVarChar).Value = username;
+				command.CommandText.Replace("@UserName",username);
                 var dataReader = command.ExecuteReader();
 
                 if (dataReader.Read())
                 {
-                    return (password==dataReader.GetString(0));
+						if (password == dataReader.GetString(0))
+							return "ok";
+						return "wrong password";
+							
                 }
 
-                    return false ;
+                    return "wrong username";
             }
 			}
 			catch (Exception)
 			{
-
-				return false;
+				return "exception";
+				
 			}
 
 
 
 		}
-    }
+		public static string DirectorSignIn(String username, String password)
+		{
+
+			try
+			{
+				using (var connection = new SqlConnection(connectionString))
+				{
+					connection.Open();
+
+					var command = connection.CreateCommand();
+					command.CommandText = "Select Password FROM Directors WHERE UserName=@UserName ";
+					command.CommandText.Replace("@UserName", username);
+					var dataReader = command.ExecuteReader();
+
+					if (dataReader.Read())
+					{
+						if (password == dataReader.GetString(0))
+							return "ok";
+						return "wrong password";
+
+					}
+
+					return "wrong username";
+				}
+			}
+			catch (Exception)
+			{
+				return "exception";
+
+			}
+
+
+
+		}
+	}
 }

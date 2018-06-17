@@ -12,7 +12,7 @@ namespace FinedProjectApp.Repositories
 	{
 		private const string connectionString = @"Data Source =(LocalDB)\MSSQLLocalDB;AttachDbFilename = |DataDirectory|\Database1.mdf; Integrated Security = True";
 
-		public static bool AddDirectors(ProjectDirec stud)
+		public static bool AddDirectors(string userName, string password, string e_mail)
 		{
 			try
 			{
@@ -24,9 +24,9 @@ namespace FinedProjectApp.Repositories
 					command.CommandText = "INSERT INTO Directors(UserName, Password, E_mail)" +
 						" VALUES(@UserName, @Password, @E_mail) ";
 
-                    command.CommandText = command.CommandText.Replace("@UserName",stud.UserName);
-                    command.CommandText = command.CommandText.Replace("@Password", stud.Password);
-                    command.CommandText = command.CommandText.Replace("@E_mail", stud.Email);
+                    command.CommandText = command.CommandText.Replace("@UserName",userName);
+                    command.CommandText = command.CommandText.Replace("@Password",password);
+                    command.CommandText = command.CommandText.Replace("@E_mail", e_mail);
 					var rowsAffected = command.ExecuteNonQuery();
 					return rowsAffected == 1;
 				}

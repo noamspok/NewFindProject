@@ -15,7 +15,7 @@ namespace FinedProjectApp.Moderators
         {
 			ParseStudentPref(studP);
             String pref="UserName,";
-            pref+=studP.GroupSize+','+ studP.Location+',' + studP.FieldOfProject;
+            pref+=studP.GroupSize+',' + studP.FieldOfProject;
 			String values = studP.UserName + SetValueString(pref);
 			string kindcols = "UserName," + studP.KindOfProject;
 			String kindvalues = studP.UserName + SetValueString(kindcols);
@@ -37,7 +37,6 @@ namespace FinedProjectApp.Moderators
 		private static void ParseStudentPref(StudentPref stud)
 		{
 			stud.FavoriteLang = Parser(stud.FavoriteLang);
-			stud.Location = Parser(stud.Location);
 			stud.KindOfProject = Parser(stud.KindOfProject);
 			stud.FieldOfProject = stud.FieldOfProject.Replace("תעשיה", "Industry").Replace("מחקר", "Research").Replace("לא משנה", "Industry,Research");
 			stud.GroupSize = stud.GroupSize.Replace("4", "GroupSize_4").Replace("3", "GroupSize_3").Replace("2", "GroupSize_2").Replace("1", "GroupSize_1")

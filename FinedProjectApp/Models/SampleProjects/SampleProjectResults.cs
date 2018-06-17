@@ -18,9 +18,7 @@ namespace FinedProjectApp.Models
         [Required]
         public int[] Results { get; set; }
 
-        [Required]
-        public string Kind { get; set; }
-
+        
 
     }
 }

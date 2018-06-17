@@ -5,22 +5,23 @@ using System.Web;
 
 namespace FinedProjectApp.Models
 {
-    public class IndustrySamples : ISampleProjects
+    public class Samples : ISampleProjects
     {
         
-        public IndustrySamples()
+        public Samples()
         {
             Initilize();
         }
 
-        public List<SampleProject> Samples { get; set; }
+        public List<SampleProject> SamplesList { get ; set; }
 
 
 
         // we need to add relevant projects
         public void Initilize()
         {
+			SamplesList.Add( new SampleProject("python", "research", "1", "machine learning"));
 
-        }
+		}
     }
 }

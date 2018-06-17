@@ -9,6 +9,6 @@ namespace FinedProjectApp.Models
    public interface ISampleProjects
     {
         void Initilize();
-        List<SampleProject> Samples { get; set; }
+        List<SampleProject> SamplesList { get; set; }
     }
 }

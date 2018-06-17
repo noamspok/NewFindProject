@@ -21,26 +21,44 @@ namespace FinedProjectApp.Controllers
 
 		}
 
-		// GET: api/Students/5
-		[ResponseType(typeof(Student))]
-		public void GetStudent(int id)
+		// GET: api/Students/5/password
+		[HttpGet()]
+		public void GetDirector(string name,string password)
 		{
-
+			var message = Repositories.SignInQuery.DirectorSignIn(name, password);
+			if(message=="ok")
+				return;
+			var response = new HttpResponseMessage()
+			{
+				StatusCode = HttpStatusCode.BadRequest,
+				ReasonPhrase = message
+			};
+			throw new HttpResponseException(response);
 		}
 
 		// PUT: api/Students/5
-		[ResponseType(typeof(void))]
+		
 		public void PutStudent(int id, Student student)
 		{
 
 		}
 
 		// POST: api/ProjectDirectors
+		[HttpPost()]
+		public void PostDirec(string userName, string password, string e_mail)
+		{
+			if (!Moderators.ModDirector.SetDirector(userName,password,e_mail))
+			{
+
+				throw new HttpResponseException(HttpStatusCode.BadRequest);
+			}
+		}
+		// POST: api/ProjectDirectors
 		[ResponseType(typeof(ProjectDirec))]
 		[HttpPost()]
-		public void PostProjectDirec(ProjectDirec projectDirec)
+		public void PostProject(ProjectDirec projectDirec)
         {
-			if (!Moderators.ModDirector.SetDirector(projectDirec))
+			if (!Moderators.ModDirector.SetProject(projectDirec))
 			{
 
 				throw new HttpResponseException(HttpStatusCode.BadRequest);
