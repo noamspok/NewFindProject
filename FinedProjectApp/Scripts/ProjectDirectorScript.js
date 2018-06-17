@@ -52,7 +52,7 @@ function AppViewModel() {
             "ProgrammingLanguage": JscodeLang,
             "Courses": Jstechnology,
             "GroupSize": JsselectedGroup,
-            "ProjectDescriptionFile": Jspdf,
+            "ProjectDescriptionFile": Jspdf
         };
 
         var apiUrl = "../api/ProjectDirectors";
@@ -60,7 +60,7 @@ function AppViewModel() {
             alert("User registered successfully");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
-            if (errorThrown == "BadRequest") {
+            if (errorThrown === "BadRequest") {
                 alert('Wrong details');
             }
             else {

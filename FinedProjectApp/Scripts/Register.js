@@ -29,7 +29,7 @@ function AppViewModel() {
         sessionStorage.UserName = ko.toJS(that.UserName);
         sessionStorage.Password = ko.toJS(that.Password);
         sessionStorage.Email = ko.toJS(that.Email);
-        if (ko.toJS(this.selected) == "student") {
+        if (ko.toJS(this.selected) === "student") {
             location.replace("../View/Student.html");
         } else {
             location.replace("../View/ProjectDirector.html");
