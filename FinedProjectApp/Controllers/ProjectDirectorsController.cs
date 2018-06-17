@@ -15,61 +15,28 @@ namespace FinedProjectApp.Controllers
     public class ProjectDirectorsController : ApiController
     {
 
-        // GET: api/ProjectDirectors
-       /* public IQueryable<ProjectDirec> GetProjectDirecs()
-        {
-            
-        }
+		// GET: api/Students
+		public void GetStudents()
+		{
 
-        // GET: api/ProjectDirectors/5
-        [ResponseType(typeof(ProjectDirec))]
-        public IHttpActionResult GetProjectDirec(string id)
-        {
-            ProjectDirec projectDirec = db.ProjectDirecs.Find(id);
-            if (projectDirec == null)
-            {
-                return NotFound();
-            }
+		}
 
-            return Ok(projectDirec);
-        }
+		// GET: api/Students/5
+		[ResponseType(typeof(Student))]
+		public void GetStudent(int id)
+		{
 
-        // PUT: api/ProjectDirectors/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutProjectDirec(string id, ProjectDirec projectDirec)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+		}
 
-            if (id != projectDirec.UserName)
-            {
-                return BadRequest();
-            }
-            
+		// PUT: api/Students/5
+		[ResponseType(typeof(void))]
+		public void PutStudent(int id, Student student)
+		{
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProjectDirecExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+		}
 
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/ProjectDirectors
-        [ResponseType(typeof(ProjectDirec))]
+		// POST: api/ProjectDirectors
+		[ResponseType(typeof(ProjectDirec))]
 		[HttpPost()]
 		public void PostProjectDirec(ProjectDirec projectDirec)
         {
@@ -82,32 +49,11 @@ namespace FinedProjectApp.Controllers
 
         // DELETE: api/ProjectDirectors/5
         [ResponseType(typeof(ProjectDirec))]
-        public IHttpActionResult DeleteProjectDirec(string id)
+        public void DeleteProjectDirec(string id)
         {
-            ProjectDirec projectDirec = db.ProjectDirecs.Find(id);
-            if (projectDirec == null)
-            {
-                return NotFound();
-            }
-
-            db.ProjectDirecs.Remove(projectDirec);
-            db.SaveChanges();
-
-            return Ok(projectDirec);
+            
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool ProjectDirecExists(string id)
-        {
-            return db.ProjectDirecs.Count(e => e.UserName == id) > 0;
-        }*/
+       
     }
 }

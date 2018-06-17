@@ -16,57 +16,22 @@ namespace FinedProjectApp.Controllers
     {
 
         // GET: api/StudentPrefs
-        /*public IQueryable<StudentPref> GetStudentPrefs()
+        public void GetStudentPrefs()
         {
-            return db.StudentPrefs;
+            
         }
 
         // GET: api/StudentPrefs/5
         [ResponseType(typeof(StudentPref))]
-        public IHttpActionResult GetStudentPref(string id)
+        public void GetStudentPref(string id)
         {
-            StudentPref studentPref = db.StudentPrefs.Find(id);
-            if (studentPref == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(studentPref);
+           
         }
 
         // PUT: api/StudentPrefs/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutStudentPref(string id, StudentPref studentPref)
+        public void PutStudentPref(string id, StudentPref studentPref)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != studentPref.UserName)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(studentPref).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StudentPrefExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
         }
 
         // POST: api/StudentPrefs
@@ -82,32 +47,11 @@ namespace FinedProjectApp.Controllers
 
         // DELETE: api/StudentPrefs/5
         [ResponseType(typeof(StudentPref))]
-        public IHttpActionResult DeleteStudentPref(string id)
+        public void DeleteStudentPref(string id)
         {
-            StudentPref studentPref = db.StudentPrefs.Find(id);
-            if (studentPref == null)
-            {
-                return NotFound();
-            }
-
-            db.StudentPrefs.Remove(studentPref);
-            db.SaveChanges();
-
-            return Ok(studentPref);
+            
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool StudentPrefExists(string id)
-        {
-            return db.StudentPrefs.Count(e => e.UserName == id) > 0;
-        }*/
+        
     }
 }
