@@ -22,7 +22,10 @@ function AppViewModel() {
             apiUrl = "../api/DirectorSignIn";
         $.post(apiUrl, JsonData).done(function (item) {
             alert("User registered successfully");
-            location.replace("../View/StudentPreference.html");
+            if (ko.toJS(this.selected) == "student") {
+                location.replace("../View/StudentPreference.html");
+            }
+            location.replace("../View/ProjectDirector.html");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
             if (errorThrown == "BadRequest") {
