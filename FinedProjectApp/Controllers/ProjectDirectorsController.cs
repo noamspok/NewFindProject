@@ -9,6 +9,8 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FinedProjectApp.Models;
+using System.Security.Cryptography;
+
 
 namespace FinedProjectApp.Controllers
 {
@@ -47,7 +49,11 @@ namespace FinedProjectApp.Controllers
 		[HttpPost()]
 		public void PostDirec(string userName, string password, string e_mail)
 		{
-			if (!Moderators.ModDirector.SetDirector(userName,password,e_mail))
+            SHA1 hash = new SHA1CryptoServiceProvider();
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(password);
+            byte[] compPass = hash.ComputeHash(pass);
+            password = System.Text.Encoding.Default.GetString(compPass);
+            if (!Moderators.ModDirector.SetDirector(userName,password,e_mail))
 			{
 
 				throw new HttpResponseException(HttpStatusCode.BadRequest);
