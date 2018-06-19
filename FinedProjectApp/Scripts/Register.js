@@ -37,11 +37,11 @@ function AppViewModel() {
             var JsonData = {
                 "username": JsUser,
                 "password": JsPass,
-                "e_mail": JsEmail,
+                "e_mail": JsEmail
 
             };
 
-            var apiUrl = "../api/ProjectDirectors/" + JsUser +"/" + JsPass + "/" + JsEmail;
+            var apiUrl = "../api/ProjectDirectors/" + JsUser + "/" + JsPass + "/" + JsEmail;
             $.post(apiUrl, JsonData).done(function (item) {
                 alert("User registered successfully");
                 location.replace("../View/ProjectDirector.html");
@@ -56,9 +56,9 @@ function AppViewModel() {
 
             });
 
-        };
+        }
 
-    }
+    };
 
     this.isFormValid = ko.computed(function () {
 

@@ -48,11 +48,11 @@ namespace FinedProjectApp.Controllers
         [HttpPost()]
         public void PostStudent(Student student)
         {
-            /*SHA1 hash = new SHA1CryptoServiceProvider();
+            SHA1 hash = new SHA1CryptoServiceProvider();
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(student.Password);
             byte[] compPass = hash.ComputeHash(pass);
-            student.Password = System.Text.Encoding.Default.GetString(compPass);*/
-            if (!Moderators.ModStudent.SetStudent(student))
+            string password = System.Text.Encoding.Default.GetString(compPass);
+            if (!Moderators.ModStudent.SetStudent(student, password))
             {
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
             }

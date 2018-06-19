@@ -11,6 +11,7 @@ namespace FinedProjectApp.Moderators
 	{
 		private static String Parser(String s)
 		{
+
 			return s.Replace("\"", "").Replace("[", "").Replace("]", "");
 		}
 
@@ -21,7 +22,7 @@ namespace FinedProjectApp.Moderators
 			for (int i = 0; i < var.Length; i++)
 			{
 				if (var[i] == ',')
-					ones += ",1";
+					ones += ",'1'";
 			}
 			
 			return ones;
@@ -33,13 +34,14 @@ namespace FinedProjectApp.Moderators
 			stud.ProgrammingLanguage = Parser(stud.ProgrammingLanguage);
 			
 		}
-		public static bool SetStudent(Student studP)
+		public static bool SetStudent(Student studP, string pass)
 		{
 			ParseStudent(studP);
+            studP.Password = pass;
 			string coursescols = "UserName, " + studP.Courses;
-			string courseval = studP.UserName + (SetValueString(coursescols));
+			string courseval = "'" + studP.UserName + "'" + (SetValueString(coursescols));
 			string Langscols = "UserName, " + studP.ProgrammingLanguage;
-			string langval = studP.UserName + (SetValueString(Langscols));
+			string langval = "'" + studP.UserName + "'" + (SetValueString(Langscols));
 			String values = studP.UserName;
 			return (AddStudent.AddStudents(studP)
 				&& AddStudent.AddStudentsCourses(coursescols,courseval) 

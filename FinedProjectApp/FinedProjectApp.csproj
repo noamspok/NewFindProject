@@ -93,17 +93,18 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap-rtl.css" />
     <Content Include="Content\bootstrap-rtl.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap-rtl.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\packages\affix.js" />
     <Content Include="Scripts\packages\alert.js" />
     <Content Include="files\research\Projects1.docx" />
@@ -142,15 +143,17 @@
     <Content Include="Scripts\packages\bootstrap.js.map" />
     <Content Include="Scripts\packages\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\packages\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\packages\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\packages\button.js" />
     <Content Include="Scripts\packages\carousel-rtl.js" />
@@ -192,6 +195,7 @@
     <Content Include="View\SignIn.html" />
     <Content Include="View\Student.html" />
     <Content Include="View\StudentPreference.html" />
+    <Content Include="View\Survey.html" />
     <Content Include="View\Welcome.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -231,7 +235,6 @@
     <Content Include="Scripts\packages\umd\popper.js.map" />
     <Content Include="Scripts\packages\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\packages\umd\popper-utils.js.map" />
-    <Content Include="Scripts\packages\README.md" />
     <Content Include="Scripts\packages\popper.min.js.map" />
     <Content Include="Scripts\packages\popper.js.map" />
     <Content Include="Scripts\packages\popper-utils.min.js.map" />
