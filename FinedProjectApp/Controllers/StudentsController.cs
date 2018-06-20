@@ -25,7 +25,11 @@ namespace FinedProjectApp.Controllers
 		[HttpGet()]
 		public void GetStudent(string name, string password)
 		{
-			var message = Repositories.SignInQuery.SignIn(name, password);
+            SHA1 hash = new SHA1CryptoServiceProvider();
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(password);
+            byte[] compPass = hash.ComputeHash(pass);
+            password = System.Text.Encoding.Default.GetString(compPass);
+            var message = Repositories.SignInQuery.SignIn(name, password);
 			if (message == "ok")
 				return;
 			var response = new HttpResponseMessage()
