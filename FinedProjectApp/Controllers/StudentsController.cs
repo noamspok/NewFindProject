@@ -23,11 +23,11 @@ namespace FinedProjectApp.Controllers
         }
 
 		[HttpGet()]
-		public void GetStudent(string name, string password)
+		public string GetStudent(string username, string password)
 		{
-			var message = Repositories.SignInQuery.SignIn(name, password);
+			var message = Repositories.SignInQuery.SignIn(username, password);
 			if (message == "ok")
-				return;
+				return message;
 			var response = new HttpResponseMessage()
 			{
 				StatusCode = HttpStatusCode.BadRequest,
@@ -37,14 +37,14 @@ namespace FinedProjectApp.Controllers
 		}
 
 		// PUT: api/Students/5
-		[ResponseType(typeof(void))]
+		
         public void PutStudent(int id, Student student)
         {
             
         }
 
         // POST: api/Students
-        [ResponseType(typeof(Student))]
+       
         [HttpPost()]
         public void PostStudent(Student student)
         {

@@ -25,9 +25,9 @@ namespace FinedProjectApp.Controllers
 
 		// GET: api/Students/5/password
 		[HttpGet()]
-		public void GetDirector(string name,string password)
+		public void GetDirector(string username,string password)
 		{
-			var message = Repositories.SignInQuery.DirectorSignIn(name, password);
+			var message = Repositories.SignInQuery.DirectorSignIn(username, password);
 			if(message=="ok")
 				return;
 			var response = new HttpResponseMessage()
@@ -56,7 +56,7 @@ namespace FinedProjectApp.Controllers
             if (!Moderators.ModDirector.SetDirector(userName,password,e_mail))
 			{
 
-				throw new HttpResponseException(HttpStatusCode.BadRequest);
+				throw new HttpResponseException(HttpStatusCode.Forbidden);
 			}
 		}
 		// POST: api/ProjectDirectors

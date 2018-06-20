@@ -51,7 +51,7 @@ function AppViewModel() {
                     alert('Wrong details');
                 }
                 else {
-                    alert('Failed to send request to server');
+                    alert(errorThrown);
                 }
 
             });
