@@ -16,23 +16,31 @@ function AppViewModel() {
         };
         var apiUrl = "";
         if (ko.toJS(this.selected) == "student") {
-            apiUrl = "../api/GetStudent/" + JsUser + "/" + JsPass ;
+            apiUrl = "../api/Students/" + JsUser + "/" + JsPass ;
         }
         else
-            apiUrl = "../api/GetDirector/" + JsUser + "/" + JsPass ;
-        $.Get(apiUrl, JsonData).done(function (item) {
-            alert("User signed in successfully");
-            if (ko.toJS(this.selected) == "student") {
-                location.replace("../View/StudentPreference.html");
-            }
-            location.replace("../View/ProjectDirector.html");
-        }).fail(function (jqXHR, status, errorThrown) {
-            // if wrong arguments
-           
-                alert(errorThrown);
-           
+            apiUrl = "../api/ProjectDirectors/" + JsUser + "/" + JsPass;
+        $.ajax({
+            url: apiUrl,
+            type: "GET",
+            success: function (data, status, jqXHR) {
+                alert("User signed in successfully");
+                sessionStorage.UserName = ko.toJS(that.UserName);
+                if (ko.toJS(that.selected) == "student") {
 
-        });
+                    location.replace("../View/StudentPreference.html");
+                }
+                if (ko.toJS(that.selected) == "project manager") {
+
+                    location.replace("../View/ProjectDirector.html");
+                }
+            },
+            error: function (jqXHR, status, err) {
+                alert(err);
+            },
+            
+        })
+       
     }; 
 }
 ko.applyBindings(new AppViewModel());
