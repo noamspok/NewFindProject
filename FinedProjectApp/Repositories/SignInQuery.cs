@@ -20,8 +20,8 @@ namespace FinedProjectApp.Repositories
                 connection.Open();
 
                 var command = connection.CreateCommand();
-                command.CommandText = "Select Password FROM Student WHERE UserName=@UserName";
-				command.CommandText = command.CommandText.Replace("@UserName",username);
+                command.CommandText = "Select Password FROM Student WHERE UserName = '@UserName'";
+				command.CommandText = command.CommandText.Replace("@UserName", username);
                 var dataReader = command.ExecuteReader();
 
                 if (dataReader.Read())
