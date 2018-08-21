@@ -212,6 +212,7 @@
     <Content Include="Scripts\packages\popper.js" />
     <Content Include="Scripts\packages\popper.min.js" />
     <Content Include="Scripts\ProjectDirectorScript.js" />
+    <Content Include="Scripts\ProjectsScript.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\SampleProjectsScript.js" />
     <Content Include="Scripts\packages\scrollspy.js" />
@@ -227,6 +228,7 @@
     <Content Include="Scripts\packages\umd\popper.min.js" />
     <Content Include="Scripts\WelcomeScript.js" />
     <Content Include="View\ProjectDirector.html" />
+    <Content Include="View\Projects.html" />
     <Content Include="View\Register.html" />
     <Content Include="View\SampleProjects.html" />
     <Content Include="View\SignIn.html" />
@@ -241,6 +243,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DirectorController.cs" />
     <Compile Include="Controllers\ProjectDirectorsController.cs" />
     <Compile Include="Controllers\StudentPrefsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
@@ -257,6 +260,7 @@
     <Compile Include="Models\Users\StudentPref.cs" />
     <Compile Include="Moderators\ModAddProject.cs" />
     <Compile Include="Moderators\ModDirector.cs" />
+    <Compile Include="Moderators\ModProject.cs" />
     <Compile Include="Moderators\ModSampleProject.cs" />
     <Compile Include="Moderators\ModStudent.cs" />
     <Compile Include="Moderators\ModStudentPref.cs" />
@@ -264,6 +268,7 @@
     <Compile Include="Repositories\AddDirector.cs" />
     <Compile Include="Repositories\AddStudent.cs" />
     <Compile Include="Repositories\AddStudentPreference.cs" />
+    <Compile Include="Repositories\Projects.cs" />
     <Compile Include="Repositories\SignInQuery.cs" />
     <Compile Include="Repositories\UpdateFromProjectSamp.cs" />
   </ItemGroup>

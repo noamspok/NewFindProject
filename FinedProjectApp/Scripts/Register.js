@@ -41,7 +41,7 @@ function AppViewModel() {
 
             };
 
-            var apiUrl = "../api/ProjectDirectors"; 
+            var apiUrl = "../api/Director"; 
             $.post(apiUrl, JsonData).done(function (item) {
                 alert("User registered successfully");
                 location.replace("../View/ProjectDirector.html");

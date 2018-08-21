@@ -22,7 +22,7 @@ namespace FinedProjectApp.Repositories
 
 					var command = connection.CreateCommand();
 					command.CommandText = "INSERT INTO Directors(UserName, Password, E_mail)" +
-						" VALUES('@UserName', '@Password', '@E_mail') ";
+						" VALUES('@UserName', N'@Password', '@E_mail') ";
 
                     command.CommandText = command.CommandText.Replace("@UserName",userName);
                     command.CommandText = command.CommandText.Replace("@Password",password);

@@ -54,7 +54,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "Select Password FROM Directors WHERE UserName=@UserName ";
+					command.CommandText = "Select Password FROM Directors WHERE UserName='@UserName'";
 					command.CommandText = command.CommandText.Replace("@UserName", username);
 					var dataReader = command.ExecuteReader();
 

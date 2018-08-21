@@ -19,7 +19,7 @@ function AppViewModel() {
             apiUrl = "../api/Students/" + JsUser + "/" + JsPass ;
         }
         else
-            apiUrl = "../api/ProjectDirectors/" + JsUser + "/" + JsPass;
+            apiUrl = "../api/Director/" + JsUser + "/" + JsPass;
         $.ajax({
             url: apiUrl,
             type: "GET",
