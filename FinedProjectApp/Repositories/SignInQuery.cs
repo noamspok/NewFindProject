@@ -23,10 +23,10 @@ namespace FinedProjectApp.Repositories
                 command.CommandText = "Select Password FROM Student WHERE UserName = '@UserName'";
 				command.CommandText = command.CommandText.Replace("@UserName", username);
                 var dataReader = command.ExecuteReader();
-
                 if (dataReader.Read())
                 {
-						if (password == dataReader.GetString(0))
+                        string a = dataReader.GetString(0);
+                        if (password.Equals(a))
 							return "ok";
 						return "wrong password";
 							

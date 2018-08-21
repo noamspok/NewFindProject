@@ -21,7 +21,11 @@ namespace FinedProjectApp.Models
         public void Initilize()
         {
 			SamplesList.Add( new SampleProject("python", "research", "1", "machine learning"));
-
-		}
+            SamplesList.Add(new SampleProject("java,c,c++", "industry","1","???"));
+            SamplesList.Add(new SampleProject("C#,sql", "industry", "1", "aplication"));
+            SamplesList.Add(new SampleProject("C++,python", "industry", "2", "aplication;AI;ml"));
+            SamplesList.Add(new SampleProject("angular,python,JS", "industry", "2", "aplication;AI;ml"));
+            
+        }
     }
 }

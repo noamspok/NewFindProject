@@ -30,7 +30,7 @@ namespace FinedProjectApp.Controllers
             byte[] compPass = hash.ComputeHash(pass);
             password = System.Text.Encoding.Default.GetString(compPass);
             var message = Repositories.SignInQuery.SignIn(username, password);
-			if (message == "ok")
+            if (message == "ok")
 				return message;
 			var response = new HttpResponseMessage()
 			{

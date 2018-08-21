@@ -10,7 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using FinedProjectApp.Models;
 using System.Security.Cryptography;
-
+using FinedProjectApp.Models.Users;
 
 namespace FinedProjectApp.Controllers
 {
@@ -47,19 +47,20 @@ namespace FinedProjectApp.Controllers
 
 		// POST: api/ProjectDirectors
 		[HttpPost()]
-		public void PostDirec(string userName, string password, string e_mail)
+		public void PostDirec(Director director)
 		{
             SHA1 hash = new SHA1CryptoServiceProvider();
-            byte[] pass = System.Text.Encoding.UTF8.GetBytes(password);
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(director.Password);
             byte[] compPass = hash.ComputeHash(pass);
-            password = System.Text.Encoding.Default.GetString(compPass);
-            if (!Moderators.ModDirector.SetDirector(userName,password,e_mail))
+            string password = System.Text.Encoding.Default.GetString(compPass);
+            if (!Moderators.ModDirector.SetDirector(director.UserName, password, director.Email))
 			{
 
 				throw new HttpResponseException(HttpStatusCode.Forbidden);
 			}
 		}
-		// POST: api/ProjectDirectors
+        /*
+		// POST: api/ProjectDirectors/bbb
 		[ResponseType(typeof(ProjectDirec))]
 		[HttpPost()]
 		public void PostProject(ProjectDirec projectDirec)
@@ -70,7 +71,7 @@ namespace FinedProjectApp.Controllers
 				throw new HttpResponseException(HttpStatusCode.BadRequest);
 			}
 		}
-
+        */
         // DELETE: api/ProjectDirectors/5
         [ResponseType(typeof(ProjectDirec))]
         public void DeleteProjectDirec(string id)

@@ -35,13 +35,13 @@ function AppViewModel() {
             var JsPass = ko.toJS(this.Password);
             var JsEmail = ko.toJS(this.Email);
             var JsonData = {
-                "username": JsUser,
-                "password": JsPass,
-                "e_mail": JsEmail
+                "UserName": JsUser,
+                "Password": JsPass,
+                "Email": JsEmail
 
             };
 
-            var apiUrl = "../api/ProjectDirectors/" + JsUser + "/" + JsPass + "/" + JsEmail;
+            var apiUrl = "../api/ProjectDirectors"; 
             $.post(apiUrl, JsonData).done(function (item) {
                 alert("User registered successfully");
                 location.replace("../View/ProjectDirector.html");
