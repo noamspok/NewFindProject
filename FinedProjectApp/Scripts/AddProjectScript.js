@@ -27,24 +27,15 @@ function AppViewModel() {
     this.StartBtn = function () {
         var JsUser = sessionStorage.getItem("UserName");
         var JsPName = ko.toJS(this.PName);
-        var JsFName = ko.toJS(this.FName);
-        
         var JsselectedReserch = ko.toJS(this.selectedReserch);
         var JsProjectOptions = ko.toJS(this.ProjectOptions);
         var JsselectedGroup = ko.toJS(this.selectedGroup);
-
         var JscodeLang = ko.toJS(this.codeLang);
-        
         var Jstechnology = ko.toJS(this.courses);
-       
-        var Jspdf = "3"//ko.toJS(this.pdf);
-        var Jsemail = sessionStorage.getItem("Email");
-        var Jspassword = sessionStorage.getItem("Password");
+        var Jspdf = ko.toJS(this.pdf);
         
         var JsonData = {
             "UserName": JsUser,
-            "Password": Jspassword,
-            "Email": Jsemail,
             "ProjectName": JsPName,
             "FieldOfProject": JsselectedReserch,
             "KindOfProject":JsProjectOptions,

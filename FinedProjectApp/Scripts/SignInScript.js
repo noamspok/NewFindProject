@@ -32,7 +32,7 @@ function AppViewModel() {
                 }
                 if (ko.toJS(that.selected) == "project manager") {
 
-                    location.replace("../View/ProjectDirector.html");
+                    location.replace("../View/ProjectsTable.html");
                 }
             },
             error: function (jqXHR, status, err) {

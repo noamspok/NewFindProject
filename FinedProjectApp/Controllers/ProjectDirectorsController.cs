@@ -45,9 +45,9 @@ namespace FinedProjectApp.Controllers
 
 		}
 
-		// POST: api/ProjectDirectors
+		/*// POST: api/ProjectDirectors
 		[HttpPost()]
-		public void PostDirec(Director director)
+		/*public void PostDirec(Director director)
 		{
             SHA1 hash = new SHA1CryptoServiceProvider();
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(director.Password);
@@ -58,9 +58,9 @@ namespace FinedProjectApp.Controllers
 
 				throw new HttpResponseException(HttpStatusCode.Forbidden);
 			}
-		}
-        /*
-		// POST: api/ProjectDirectors/bbb
+		}*/
+        
+		// POST: api/ProjectDirectors
 		[ResponseType(typeof(ProjectDirec))]
 		[HttpPost()]
 		public void PostProject(ProjectDirec projectDirec)
@@ -71,7 +71,7 @@ namespace FinedProjectApp.Controllers
 				throw new HttpResponseException(HttpStatusCode.BadRequest);
 			}
 		}
-        */
+        
         // DELETE: api/ProjectDirectors/5
         [ResponseType(typeof(ProjectDirec))]
         public void DeleteProjectDirec(string id)

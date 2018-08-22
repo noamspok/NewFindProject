@@ -211,8 +211,8 @@
     <Content Include="Scripts\packages\popper-utils.min.js" />
     <Content Include="Scripts\packages\popper.js" />
     <Content Include="Scripts\packages\popper.min.js" />
-    <Content Include="Scripts\ProjectDirectorScript.js" />
-    <Content Include="Scripts\ProjectsScript.js" />
+    <Content Include="Scripts\AddProjectScript.js" />
+    <Content Include="Scripts\ProjectsTable.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\SampleProjectsScript.js" />
     <Content Include="Scripts\packages\scrollspy.js" />
@@ -227,8 +227,8 @@
     <Content Include="Scripts\packages\umd\popper.js" />
     <Content Include="Scripts\packages\umd\popper.min.js" />
     <Content Include="Scripts\WelcomeScript.js" />
-    <Content Include="View\ProjectDirector.html" />
-    <Content Include="View\Projects.html" />
+    <Content Include="View\AddProject.html" />
+    <Content Include="View\ProjectsTable.html" />
     <Content Include="View\Register.html" />
     <Content Include="View\SampleProjects.html" />
     <Content Include="View\SignIn.html" />

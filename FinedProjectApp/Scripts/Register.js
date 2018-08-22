@@ -22,8 +22,6 @@ function AppViewModel() {
     this.Options = ko.observableArray(["student", "project manager"]);
     this.selected = ko.observable("");
     this.RegBtn = function () {
-
-
         sessionStorage.UserName = ko.toJS(that.UserName);
 
         if (ko.toJS(this.selected) === "student") {
