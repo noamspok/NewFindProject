@@ -1,7 +1,4 @@
-﻿
-
-
-function AppViewModel() {
+﻿function AppViewModel() {
     var that = this;
     this.UserName = ko.observable("").extend({ required: { message: "Please enter a UserName" } });
     this.Password = ko.observable("").extend({ required: { message: "Please enter your Password" } });

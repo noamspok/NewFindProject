@@ -45,9 +45,10 @@ function AppViewModel() {
             "ProjectDescriptionFile": Jspdf
         };
 
-        var apiUrl = "../api/ProjectDirectors";
+        var apiUrl = "../api/Project";
         $.post(apiUrl, JsonData).done(function (item) {
             alert("User registered successfully");
+            location.replace("../View/ProjectsTable.html");
         }).fail(function (jqXHR, status, errorThrown) {
             // if wrong arguments
             if (errorThrown === "BadRequest") {

@@ -9,7 +9,8 @@ namespace FinedProjectApp.Repositories
     public class Projects
     {
         private const string connectionString = @"Data Source =(LocalDB)\MSSQLLocalDB;AttachDbFilename = |DataDirectory|\Database1.mdf; Integrated Security = True";
-        public List<string> getProjectNames(string directorsName){
+
+        public static List<string> getProjectsNames(string directorsName){
             List<string> listOfProjects = new List<string>();
             try
             {

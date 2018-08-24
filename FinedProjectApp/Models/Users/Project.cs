@@ -9,7 +9,7 @@ using System.Web;
 /// </summary>
 namespace FinedProjectApp.Models
 {
-	public class ProjectDirec
+	public class Project
 	{
 		/*
 			 * Project Director personal details

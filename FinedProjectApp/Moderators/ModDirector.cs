@@ -17,9 +17,6 @@ namespace FinedProjectApp.Moderators
 				
 				
 		}
-		public static bool SetProject(ProjectDirec direcP)
-		{
-			return ModAddProject.AddProject(direcP);
-		}
+		
 	}
 }

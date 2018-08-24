@@ -10,7 +10,7 @@ namespace FinedProjectApp.Moderators
 	public class ModAddProject
 	{
 
-		public static bool AddProject(ProjectDirec direcP)
+		public static bool AddProject(Project direcP)
 		{
             ParseDirector(direcP);
             string coursescols = "ProjectName," + direcP.Courses;
@@ -48,7 +48,7 @@ namespace FinedProjectApp.Moderators
 			return ones;
 
 		}
-		private static void ParseDirector(ProjectDirec direc)
+		private static void ParseDirector(Project direc)
 		{
 			direc.ProgrammingLanguage = Parser(direc.ProgrammingLanguage);
 			direc.Courses = Parser(direc.Courses);

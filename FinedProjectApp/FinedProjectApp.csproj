@@ -244,14 +244,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DirectorController.cs" />
-    <Compile Include="Controllers\ProjectDirectorsController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\StudentPrefsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Users\Director.cs" />
-    <Compile Include="Models\Users\ProjectDirec.cs" />
+    <Compile Include="Models\Users\Project.cs" />
     <Compile Include="Models\SampleProjects\Samples.cs" />
     <Compile Include="Models\SampleProjects\SampleProject.cs" />
     <Compile Include="Models\SampleProjects\SampleProjectResults.cs" />
