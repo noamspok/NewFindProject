@@ -39,8 +39,8 @@ function AppViewModel() {
             "ProjectName": JsPName,
             "FieldOfProject": JsselectedReserch,
             "KindOfProject":JsProjectOptions,
-            "ProgrammingLanguage": JscodeLang,
-            "Courses": Jstechnology,
+            "ProgrammingLanguage": JSON.stringify(JscodeLang),
+            "Courses": JSON.stringify(Jstechnology),
             "GroupSize": JsselectedGroup,
             "ProjectDescriptionFile": Jspdf
         };
