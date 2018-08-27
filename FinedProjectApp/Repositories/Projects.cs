@@ -19,8 +19,14 @@ namespace FinedProjectApp.Repositories
                     connection.Open();
                     var command = connection.CreateCommand();
                     command.CommandText = "SELECT ProjectName FROM Projects WHERE DirectorName = '@directorsName'";
-                    command.CommandText = command.CommandText.Replace("directorsName", directorsName);
-                    var rowsAffected = command.ExecuteNonQuery();
+                    command.CommandText = command.CommandText.Replace("@directorsName", directorsName);
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+
+                    {
+                        listOfProjects.Add(reader["ProjectName"].ToString());
+
+                    }
                     return listOfProjects;
                 }
             }
