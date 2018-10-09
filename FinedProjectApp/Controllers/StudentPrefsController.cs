@@ -9,30 +9,33 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FinedProjectApp.Models;
+using FinedProjectApp.Repositories;
 
 namespace FinedProjectApp.Controllers
 {
     public class StudentPrefsController : ApiController
     {
-	private Samples samp=new Samples();
+	
         // GET: api/StudentPrefs
         public void GetStudentPrefs()
         {
             
         }
 
-        // GET: api/StudentPrefs/5
+        // GET: /5
         [ResponseType(typeof(StudentPref))]
         public void GetStudentPref(string id)
         {
            
         }
 
-        // PUT: api/StudentPrefs/5
-       
-        public void PutSampleResults(SampleProjectResults samplesResult)
+		[Route("api/StudentPrefs/SampleResults")]
+		
+		[HttpPost]
+		public void PostSampleResults(SampleProjectResults samplesResult)
         {
-			if (!Moderators.ModSampleProject.UpdateTables(samp,samplesResult))
+			
+			if (!Moderators.ModSampleProject.UpdateTables(samplesResult))
 			{
 
 				throw new HttpResponseException(HttpStatusCode.BadRequest);

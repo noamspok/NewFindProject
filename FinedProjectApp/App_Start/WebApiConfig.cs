@@ -24,6 +24,11 @@ namespace FinedProjectApp
 				defaults: new { controller = "ProjectDirectors" }
 			);
 			config.Routes.MapHttpRoute(
+	name: "ControllerAndAction",
+	routeTemplate: "api/{controller}/SampleResults",
+	defaults: new { controller = "StudentPrefs" }
+);
+			config.Routes.MapHttpRoute(
 				name: "DirecrRegisterApi",
 				routeTemplate: "api/{controller}/{username}/{password}/{e_mail}",
 				defaults: new { controller = "ProjectDirectors" }

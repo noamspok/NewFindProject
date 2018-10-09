@@ -13,10 +13,8 @@ function AppViewModel() {
     this.Proj4score = ko.observable("");
     this.Proj5score = ko.observable("");
     this.Proj6score = ko.observable("");
-    this.Proj7score = ko.observable("");
-    this.Proj8score = ko.observable("");
-
-    this.StartBtn = function () {
+   
+    this.NextBtn = function () {
         var JsUser = sessionStorage.getItem("UserName");
         var JsProj1score = ko.toJS(this.Proj1score);
         var JsProj2score = ko.toJS(this.Proj2score);
@@ -24,18 +22,17 @@ function AppViewModel() {
         var JsProj4score = ko.toJS(this.Proj4score);
         var JsProj5score = ko.toJS(this.Proj5score);
         var JsProj6score = ko.toJS(this.Proj6score);
-        var JsProj7score = ko.toJS(this.Proj7score);
-        var JsProj8score = ko.toJS(this.Proj8score);
+       
         
         
 
         var JsonData = {
             "UserName": JsUser,
-            "Results": JSON.stringify(JsProj1score, JsProj2score, JsProj3score, JsProj4score, JsProj5score, JsProj6score, JsProj7score, JsProj8score,)
+            "Results": JSON.stringify(JsProj1score, JsProj2score, JsProj3score, JsProj4score, JsProj5score, JsProj6score)
 
         };
-        var apiUrl = "..api/StudentPrefs";
-        $.put(apiUrl, JsonData).done(function (item) {
+        var apiUrl = "../api/StudentPrefs/SampleResults";
+        $.post(apiUrl, JsonData).done(function (item) {
             alert("User registered successfully");
             location.replace("../View/StudentPreference.html");
         }).fail(function (jqXHR, status, errorThrown) {

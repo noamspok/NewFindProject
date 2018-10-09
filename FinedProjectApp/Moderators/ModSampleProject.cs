@@ -10,10 +10,11 @@ namespace FinedProjectApp.Moderators
 {
 	public static class ModSampleProject
 	{
-		public static bool UpdateTables(ISampleProjects samples, SampleProjectResults results)
+		public static bool UpdateTables( SampleProjectResults results)
 		{
+			Samples samples = new Samples();
 			int j = 0;
-			foreach (SampleProject sample in samples.SamplesList)
+			foreach (SampleProject sample in samples.getSamples())
 			{
 
 				foreach (string s in sample.GetMembers())

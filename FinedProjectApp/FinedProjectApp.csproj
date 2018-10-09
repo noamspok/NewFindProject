@@ -250,7 +250,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\StudentsPreferenceRank.cs" />
     <Compile Include="Models\Users\Director.cs" />
     <Compile Include="Models\Users\Project.cs" />
     <Compile Include="Models\SampleProjects\Samples.cs" />
@@ -258,6 +257,7 @@
     <Compile Include="Models\SampleProjects\SampleProjectResults.cs" />
     <Compile Include="Models\SampleProjects\ISampleProjects.cs" />
     <Compile Include="Models\Users\Student.cs" />
+    <Compile Include="Models\Users\StudentFinalRates.cs" />
     <Compile Include="Models\Users\StudentPref.cs" />
     <Compile Include="Moderators\ModAddProject.cs" />
     <Compile Include="Moderators\ModDirector.cs" />
@@ -269,6 +269,9 @@
     <Compile Include="Repositories\AddDirector.cs" />
     <Compile Include="Repositories\AddStudent.cs" />
     <Compile Include="Repositories\AddStudentPreference.cs" />
+    <Compile Include="Repositories\FinalStudPref.cs" />
+    <Compile Include="Repositories\GetProjectProposals.cs" />
+    <Compile Include="Repositories\GetStudentFinalRates.cs" />
     <Compile Include="Repositories\Projects.cs" />
     <Compile Include="Repositories\Rank.cs" />
     <Compile Include="Repositories\SignInQuery.cs" />

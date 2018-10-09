@@ -20,7 +20,6 @@ function AppViewModel() {
     this.SubmitBtn = function () {
         var JsUser = sessionStorage.getItem("UserName");
         var JsselectedReserch = ko.toJS(this.selectedReserch);
-        var JsselectedLocation = ko.toJS(this.Location);
         var JsselectedGroup = ko.toJS(this.selectedGroup);
         var JsProjectOptions = ko.toJS(this.ProjectOptions);
         var JsFavoriteLang = ko.toJS(this.codeLang);
