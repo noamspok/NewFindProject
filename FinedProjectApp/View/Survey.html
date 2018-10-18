@@ -3,8 +3,102 @@
 <head>
     <meta charset="utf-8" />
     <title>Survey</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: right;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
-    <p align="center"><font size="8" color="blue">שאלון לסיום</font></p>
+    <div class="container" align="right">
+        <h2 align="center"><font size="8" color="blue">שאלון לסיום</font></h2>
+        <h1><span class="badge badge-light text-primary"> בדף זה שאלון</span></h1>
+        <h1><span class="badge badge-light text-primary">נשמח לשיתוף פעולה על מנת שנוכל להמשיך ולשפר את המערכת</span></h1>
+        <h1><span class="badge badge-light text-primary"> לכל שאלה יש לבחור את המספר המתאים ביותר כאשר 1 זה לא מסכים ו5 זה מסכים מאוד</span></h1>
+        <br /><br />
+        <table align="right">
+            <tr>
+                <th>5</th>
+                <th>4</th>
+                <th>3</th>
+                <th>2</th>
+                <th>1</th>
+
+                <th>שאלה</th>
+            </tr>
+            <tr>
+
+                <th><input type="radio" name="a" value="1" data-bind="checked:a"> </th>
+                <th><input type="radio" name="a" value="2" data-bind="checked:a"> </th>
+                <th><input type="radio" name="a" value="3" data-bind="checked:a"> </th>
+                <th><input type="radio" name="a" value="4" data-bind="checked:a"> </th>
+                <th><input type="radio" name="a" value="5" data-bind="checked:a"> </th>
+                <th>האם הרגשת שהמללצות המערכת היו נכונות עבורך?</th>
+            </tr>
+            <tr>
+
+                <th><input type="radio" name="b" value="1" data-bind="checked:b"> </th>
+                <th><input type="radio" name="b" value="2" data-bind="checked:b"> </th>
+                <th><input type="radio" name="b" value="3" data-bind="checked:b"> </th>
+                <th><input type="radio" name="b" value="4" data-bind="checked:b"> </th>
+                <th><input type="radio" name="b" value="5" data-bind="checked:b"> </th>
+                <th>האם השאלות שנשאלו היו רלוונטיות לשיקולים שלך בבחירת הפרוייקט?</th>
+            </tr>
+            <tr>
+
+                <th><input type="radio" name="c" value="1" data-bind="checked:c"> </th>
+                <th><input type="radio" name="c" value="2" data-bind="checked:c"> </th>
+                <th><input type="radio" name="c" value="3" data-bind="checked:c"> </th>
+                <th><input type="radio" name="c" value="4" data-bind="checked:c"> </th>
+                <th><input type="radio" name="c" value="5" data-bind="checked:c"> </th>
+                <th>האם המערכת הציגה לך אופציות רלוונטיות?</th>
+            </tr>
+            <tr>
+
+                <th><input type="radio" name="d" value="1" data-bind="checked:d"> </th>
+                <th><input type="radio" name="d" value="2" data-bind="checked:d"> </th>
+                <th><input type="radio" name="d" value="3" data-bind="checked:d"> </th>
+                <th><input type="radio" name="d" value="4" data-bind="checked:d"> </th>
+                <th><input type="radio" name="d" value="5" data-bind="checked:d"> </th>
+                <th>האם הרגשת שהמללצות המערכת היו נכונות עבורך?</th>
+            </tr>
+            <tr>
+
+                <th><input type="radio" name="e" value="1" data-bind="checked:e"> </th>
+                <th><input type="radio" name="e" value="2" data-bind="checked:e"> </th>
+                <th><input type="radio" name="e" value="3" data-bind="checked:e"> </th>
+                <th><input type="radio" name="e" value="4" data-bind="checked:e"> </th>
+                <th><input type="radio" name="e" value="5" data-bind="checked:e"> </th>
+                <th>האם הרגשת שהמללצות המערכת היו נכונות עבורך?</th>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <button class="btn btn-lg btn-primary" type="button" data-bind="click: NextBtn">Submit</button>
+
+
+    <script src="../Scripts/packages/jquery-3.2.1.js"></script>
+    <script src="../Scripts/packages/bootstrap.js"></script>
+    <script src="../Scripts/packages/knockout-3.4.2.js"></script>
+    <script src="../Scripts/packages/knockout.validation.js"></script>
+    <script src="../Scripts/SurveyScript.js"></script>
 </body>
 </html>
