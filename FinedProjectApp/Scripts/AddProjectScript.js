@@ -11,7 +11,7 @@ function AppViewModel() {
     this.GroupOptions = ko.observableArray(["1", "2", "3", "4"]);
     this.reserchOptions = ko.observableArray(["תעשיה", "מחקר"]);
     this.ProjectOptions = ko.observableArray([]);
-    
+    this.avg = ko.observable("");
     this.selectedGroup = ko.observable("");  
 
     this.selectedReserch = ko.observable("");
@@ -33,7 +33,7 @@ function AppViewModel() {
         var JscodeLang = ko.toJS(this.codeLang);
         var Jstechnology = ko.toJS(this.courses);
         var Jspdf = ko.toJS(this.pdf);
-        
+        var Jsavg = ko.toJS(this.avg);
         var JsonData = {
             "UserName": JsUser,
             "ProjectName": JsPName,
@@ -42,7 +42,8 @@ function AppViewModel() {
             "ProgrammingLanguage": JSON.stringify(JscodeLang),
             "Courses": JSON.stringify(Jstechnology),
             "GroupSize": JsselectedGroup,
-            "ProjectDescriptionFile": Jspdf
+            "ProjectDescriptionFile": Jspdf,
+            "Avg": Jsavg
         };
 
         var apiUrl = "../api/Project";

@@ -11,5 +11,5 @@
     this.RegBtn = function () {
         //move to add project page  
         location.replace("../View/AddProjectS.html");
-    }
+    };
 }

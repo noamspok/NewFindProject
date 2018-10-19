@@ -21,7 +21,7 @@ namespace FinedProjectApp.Repositories
 					connection.Open();
 
 					var command = connection.CreateCommand();
-					command.CommandText = "INSERT INTO Student(UserName, Password, E_mail, first_Name, Last_Name, Id,Avg)" +
+					command.CommandText = "INSERT INTO Student(UserName, Password, E_mail, first_Name, Last_Name, Id,Average)" +
 						" VALUES('@UserName', N'@Password', '@E_mail', '@first_Name', '@Last_Name', '@Id', '@avg') ";
                     command.CommandText = command.CommandText.Replace("@UserName", stud.UserName).Replace("@Password", stud.Password)
                         .Replace("@E_mail", stud.Email).Replace("@first_Name", stud.FirstName).Replace("@Last_Name", stud.LastName)
