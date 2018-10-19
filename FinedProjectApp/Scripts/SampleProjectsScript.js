@@ -13,7 +13,7 @@ function AppViewModel() {
     this.Proj4score = ko.observable("");
     this.Proj5score = ko.observable("");
     this.Proj6score = ko.observable("");
-   
+
     this.NextBtn = function () {
         var JsUser = sessionStorage.getItem("UserName");
         var JsProj1score = ko.toJS(this.Proj1score);
@@ -22,9 +22,9 @@ function AppViewModel() {
         var JsProj4score = ko.toJS(this.Proj4score);
         var JsProj5score = ko.toJS(this.Proj5score);
         var JsProj6score = ko.toJS(this.Proj6score);
-       
-        
-        
+
+
+
 
         var JsonData = {
             "UserName": JsUser,
@@ -52,4 +52,3 @@ function AppViewModel() {
 }
 
 ko.applyBindings(AppViewModel);
-
