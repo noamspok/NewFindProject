@@ -10,7 +10,7 @@
         <h1 class="form-signin-heading">הוספת פרויקט</h1>
         <h4>אנא מלא/י את הפרטים הבאים:</h4>
         <br />
-        
+
         <div class="form-group">
             <div class="row">
                 <label for="Username" class="col-md-2 control-label">שם פרוייקט: </label>
@@ -18,7 +18,18 @@
                     <input type="text" class="form-control" data-bind="value:PName, valueUpdate: 'keyup'"
                            placeholder=" שם פרויקט" />
                     <span data-bind='visible: PName.hasError, text: PName.validationMessage'> </span>
-                   
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label for="avg" class="col-md-2 control-label">ממוצע: </label>
+                <div class="col-md-5">
+                    <input type="number" class="form-control" data-bind="value:avg, valueUpdate: 'keyup'"
+                           placeholder=" ממוצע" />
+                    <span data-bind='visible: avg.hasError, text: avg.validationMessage'> </span>
+
                 </div>
             </div>
         </div>
@@ -35,10 +46,10 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-                
+
+
+
+
         <legend>תחום פרויקט: </legend>
         <label class="col-sm-2">
             <input type="checkbox" value="Machine" data-bind="checked: ProjectOptions">
@@ -70,13 +81,13 @@
 
             אחר
         </label>
-      
-            <br />
-            
+
+        <br />
 
 
-            <br /><br />
-            
+
+        <br /><br />
+
 
 
         <div class="form-group">
@@ -99,136 +110,136 @@
 
         </div>
 
-            <br /><br />
-            <legend>קורסים נדרשים:</legend>
-            <br />
-            <div class="form-group">
-                <div class="row">
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Safe" data-bind="checked: courses">
-                        תכנות בטוח
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Networks" data-bind="checked: courses">
-                        רשתות תקשורת
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Machine" data-bind="checked: courses">
+        <br /><br />
+        <legend>קורסים נדרשים:</legend>
+        <br />
+        <div class="form-group">
+            <div class="row">
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Safe" data-bind="checked: courses">
+                    תכנות בטוח
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Networks" data-bind="checked: courses">
+                    רשתות תקשורת
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Machine" data-bind="checked: courses">
 
-                        למידת מכונה
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Dinalogs" data-bind="checked: courses">
-                        אלגוריתמים דינמיים
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Pic" data-bind="checked: courses">
-                        עיבוד תמונה
-                    </label>
+                    למידת מכונה
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Dinalogs" data-bind="checked: courses">
+                    אלגוריתמים דינמיים
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Pic" data-bind="checked: courses">
+                    עיבוד תמונה
+                </label>
 
-                    <label class="col-sm-2">
+                <label class="col-sm-2">
 
-                        <input type="checkbox" value="SwVal" data-bind="checked: courses">
-                        שיטות אימות לתוכנה
-                    </label>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="SQL" data-bind="checked: courses">
-                        מערכות מסדי נתונים
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="AI" data-bind="checked: courses">
-                        בינה מלאכותית
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="GamesIntro" data-bind="checked: courses">
-                        מבוא לתורת המשחקים
-                    </label>
-
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Crypto" data-bind="checked: courses">
-                        מבוא לקריפטוגרפיה
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="NatLang" data-bind="checked: courses">
-                        עיבוד שפות טבעיות
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="IntroInteligence" data-bind="checked: courses">
-                        מבוא למערכות תבוניות
-                    </label>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Robotics" data-bind="checked: courses">
-                        מבוא לרובוטיקה
-                    </label>
-
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Bioligic" data-bind="checked: courses">
-                        ביולוגיה חישובית
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Decision" data-bind="checked: courses">
-                        קבלת החלטות
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="DinamicAlgos" data-bind="checked: courses">
-                        אלגוריתמים דינאמיים
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="AdvSQL" data-bind="checked: courses">
-                        מסדי נתונים מתקדמים
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="DataManage" data-bind="checked: courses">
-                        ניהול נתוני עתק
-                    </label>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="GraphesTheory" data-bind="checked: courses">
-                        תורת הגרפים
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="CompSite" data-bind="checked: courses">
-                        ראיה ממוחשבת
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="DistributedSystems" data-bind="checked: courses">
-                        מערכות מבוזרות
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="DesidnTemp" data-bind="checked: courses">
-                        עיצוב תבניות
-                    </label>
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Multimedia" data-bind="checked: courses">
-                        מולטימדיה
-                    </label>
-
-                    <label class="col-sm-2">
-                        <input type="checkbox" value="Grafic" data-bind="checked: courses">
-                        גרפיקה ממוחשבת
-                    </label>
-                </div>
-                <div class="row">
-                    <label class="col-sm-6">
-                        <input type="checkbox" value="RoboAlgos" data-bind="checked: courses">
-                        שיטות אלגוריתמיות לפתרון בעיות רובוטים
-                    </label>
-                    <label class="col-sm-6">
-                        <input type="checkbox" value="DeapLearning" data-bind="checked: courses">
-                        שיטות דיפ לרנינג לטקסטים ורצפים
-                    </label>
-
-                    
-                </div>
+                    <input type="checkbox" value="SwVal" data-bind="checked: courses">
+                    שיטות אימות לתוכנה
+                </label>
             </div>
+            <div class="row">
+                <label class="col-sm-2">
+                    <input type="checkbox" value="SQL" data-bind="checked: courses">
+                    מערכות מסדי נתונים
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="AI" data-bind="checked: courses">
+                    בינה מלאכותית
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="GamesIntro" data-bind="checked: courses">
+                    מבוא לתורת המשחקים
+                </label>
 
-            <br />
-            <legend>שפות תכנות נדרשות</legend>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Crypto" data-bind="checked: courses">
+                    מבוא לקריפטוגרפיה
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="NatLang" data-bind="checked: courses">
+                    עיבוד שפות טבעיות
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="IntroInteligence" data-bind="checked: courses">
+                    מבוא למערכות תבוניות
+                </label>
+            </div>
+            <div class="row">
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Robotics" data-bind="checked: courses">
+                    מבוא לרובוטיקה
+                </label>
+
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Bioligic" data-bind="checked: courses">
+                    ביולוגיה חישובית
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Decision" data-bind="checked: courses">
+                    קבלת החלטות
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="DinamicAlgos" data-bind="checked: courses">
+                    אלגוריתמים דינאמיים
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="AdvSQL" data-bind="checked: courses">
+                    מסדי נתונים מתקדמים
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="DataManage" data-bind="checked: courses">
+                    ניהול נתוני עתק
+                </label>
+            </div>
+            <div class="row">
+                <label class="col-sm-2">
+                    <input type="checkbox" value="GraphesTheory" data-bind="checked: courses">
+                    תורת הגרפים
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="CompSite" data-bind="checked: courses">
+                    ראיה ממוחשבת
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="DistributedSystems" data-bind="checked: courses">
+                    מערכות מבוזרות
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="DesidnTemp" data-bind="checked: courses">
+                    עיצוב תבניות
+                </label>
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Multimedia" data-bind="checked: courses">
+                    מולטימדיה
+                </label>
+
+                <label class="col-sm-2">
+                    <input type="checkbox" value="Grafic" data-bind="checked: courses">
+                    גרפיקה ממוחשבת
+                </label>
+            </div>
+            <div class="row">
+                <label class="col-sm-6">
+                    <input type="checkbox" value="RoboAlgos" data-bind="checked: courses">
+                    שיטות אלגוריתמיות לפתרון בעיות רובוטים
+                </label>
+                <label class="col-sm-6">
+                    <input type="checkbox" value="DeapLearning" data-bind="checked: courses">
+                    שיטות דיפ לרנינג לטקסטים ורצפים
+                </label>
+
+
+            </div>
+        </div>
+
+        <br />
+        <legend>שפות תכנות נדרשות</legend>
         <div class="row">
             <label class="col-sm-2">
                 <input type="checkbox" value="C" data-bind="checked: codeLang">
@@ -284,43 +295,37 @@
                 PHP
             </label>
         </div>
-            <div class="form-group">
+        <div class="form-group">
+            <br />
+            <br />
+            <br />
+            <div class="row">
                 <br />
                 <br />
                 <br />
                 <div class="row">
-
-
-                    <legend> צרף קובץ תיאור פרוייקט:</legend>
-                    <form action="/action_page.php">
-                        <input type="file" name="pic" accept="image/*" data-bind="value:pdf">
-                    </form>
-                    <br />
-                    <br />
-                    <br />
-                    <div class="row">
-                        <div class="col-lg-4">
-                        </div>
-                        <div class="col-lg-4">
-                            <button class="btn btn-lg btn-primary" type="button" data-bind="click: StartBtn">Submit</button>
-                        </div>
-                        <div class="col-lg-4">
-                        </div>
+                    <div class="col-lg-4">
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-lg btn-primary" type="button" data-bind="click: StartBtn">Submit</button>
+                    </div>
+                    <div class="col-lg-4">
                     </div>
                 </div>
-
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-</div>
 
-    
-                <script src="../Scripts/packages/jquery-3.2.1.js"></script>
-                <script src="../Scripts/packages/knockout-3.4.2.js"></script>
-                <script src="../Scripts/packages/knockout.validation.js"></script>
-            <script src="../Scripts/AddProjectScript.js"></script>
-           
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+
+    <script src="../Scripts/packages/jquery-3.2.1.js"></script>
+    <script src="../Scripts/packages/knockout-3.4.2.js"></script>
+    <script src="../Scripts/packages/knockout.validation.js"></script>
+    <script src="../Scripts/AddProjectScript.js"></script>
+
 </body>
 </html>

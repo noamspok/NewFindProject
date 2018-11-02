@@ -37,6 +37,27 @@ namespace FinedProjectApp.Repositories
             }
             
     }
-            
+        public static bool updateProjectLocation(string projectsName, string projectsPath)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    command.CommandText = "UPDATE Projects SET ProjectPath = '@projectsPath' WHERE ProjectName = '@projectsName'";
+                    command.CommandText = command.CommandText.Replace("@projectsPath", projectsPath).Replace("@projectsName",projectsName);
+                    var rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected == 1;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+        }
+
     }
 }

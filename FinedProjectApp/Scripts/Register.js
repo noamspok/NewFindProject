@@ -42,7 +42,7 @@ function AppViewModel() {
             var apiUrl = "../api/Director"; 
             $.post(apiUrl, JsonData).done(function (item) {
                 alert("User registered successfully");
-                location.replace("../View/ProjectDirector.html");
+                location.replace("../View/AddDirector.html");
             }).fail(function (jqXHR, status, errorThrown) {
                 // if wrong arguments
                 if (errorThrown === "BadRequest") {

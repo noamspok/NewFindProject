@@ -212,6 +212,7 @@
     <Content Include="Scripts\packages\popper.js" />
     <Content Include="Scripts\packages\popper.min.js" />
     <Content Include="Scripts\AddProjectScript.js" />
+    <Content Include="Scripts\UploadFileScript.js" />
     <Content Include="Scripts\ProjectsTable.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\SampleProjectsScript.js" />
@@ -236,6 +237,7 @@
     <Content Include="View\Student.html" />
     <Content Include="View\StudentPreference.html" />
     <Content Include="View\Survey.html" />
+    <Content Include="View\UploadFile.html" />
     <Content Include="View\Welcome.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -245,6 +247,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DirectorController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\StudentPrefsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
