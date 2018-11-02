@@ -276,6 +276,7 @@
     <Compile Include="Repositories\AddDirector.cs" />
     <Compile Include="Repositories\AddStudent.cs" />
     <Compile Include="Repositories\AddStudentPreference.cs" />
+    <Compile Include="Repositories\CompareTables.cs" />
     <Compile Include="Repositories\FinalStudPref.cs" />
     <Compile Include="Repositories\GetProjectProposals.cs" />
     <Compile Include="Repositories\GetStudentFinalRates.cs" />

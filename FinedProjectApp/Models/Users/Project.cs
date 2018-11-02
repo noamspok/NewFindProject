@@ -49,6 +49,9 @@ namespace FinedProjectApp.Models
 		[Required]
 		public string GroupSize { get; set; }
 
+		[Required]
+		public int Avg { get; set; }
+
 		// attached file which describes the project
 		[Required]
 		public string ProjectName { get; set; }

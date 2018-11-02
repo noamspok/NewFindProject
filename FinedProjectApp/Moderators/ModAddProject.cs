@@ -20,9 +20,9 @@ namespace FinedProjectApp.Moderators
 			string kindscols = "ProjectName," + direcP.KindOfProject;
 			string kindval = "'" + direcP.ProjectName + "'" + (SetValueString(kindscols));
 			string projcol = "ProjectName, ProjectPath,";
-			string temp = "DirectorName, "  + direcP.FieldOfProject + "," + direcP.GroupSize;
+			string temp = "DirectorName, "  + direcP.FieldOfProject + "," + direcP.GroupSize + "," + "Average";
 			projcol += temp;
-			string projvalue ="'" + direcP.ProjectName + "'," + "'" + direcP.ProjectDescriptionFile + "'," + "'" + direcP.UserName + "'" + SetValueString(temp);
+			string projvalue ="'" + direcP.ProjectName + "'," + "'" + direcP.ProjectDescriptionFile + "'," + "'" + direcP.UserName + "'" + SetValueString(temp) + "'," +direcP.Avg;
 			return ( AddDirector.AddProject(projcol, projvalue)
 				&& AddDirector.AddDirectorsCourses(coursescols, courseval)
 				&& AddDirector.AddDirectorLang(Langscols, langval)
