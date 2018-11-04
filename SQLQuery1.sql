@@ -19,4 +19,4 @@ select DirectorsCourses.*, Projects.Average from projects
  inner JOIN DirectorsCourses ON projects.ProjectName = 'a' and DirectorsCourses.ProjectName='a' 
 
  INSERT INTO [dbo].[DirectorsCourses] ([ProjectName], [CompSite], [DistributedSystems], [DesidnTemp], [Multimedia]) VALUES ('c', 1, 1, 1,1 )
-, [AdvSQL], [DataManage], [GraphesTheory], [CompSite], [DistributedSystems], [DesidnTemp], [Multimedia], [Crypto], [IntroInteligence], [Robotics], [Bioligic], [Decision], [Safe], [Networks], [Dinalogs], [Pic], [SwVal], [SQL], [GamesIntro], [NatLang], [Grafic], [RoboAlgos], [DeapLearning]
+/* [AdvSQL], [DataManage], [GraphesTheory], [CompSite], [DistributedSystems], [DesidnTemp], [Multimedia], [Crypto], [IntroInteligence], [Robotics], [Bioligic], [Decision], [Safe], [Networks], [Dinalogs], [Pic], [SwVal], [SQL], [GamesIntro], [NatLang], [Grafic], [RoboAlgos], [DeapLearning]

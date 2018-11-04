@@ -248,6 +248,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DirectorController.cs" />
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\FinalProjectsController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\StudentPrefsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
@@ -267,6 +268,7 @@
     <Compile Include="Models\Users\StudentPref.cs" />
     <Compile Include="Moderators\ModAddProject.cs" />
     <Compile Include="Moderators\ModDirector.cs" />
+    <Compile Include="Moderators\ModFinalProposal.cs" />
     <Compile Include="Moderators\ModProject.cs" />
     <Compile Include="Moderators\ModSampleProject.cs" />
     <Compile Include="Moderators\ModStudent.cs" />

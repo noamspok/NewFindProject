@@ -34,7 +34,7 @@ namespace FinedProjectApp.Controllers
 		[HttpPost]
 		public void PostSampleResults(SampleProjectResults samplesResult)
         {
-			
+			GetStudentFinalRates.GetFinalRates("1");
 			if (!Moderators.ModSampleProject.UpdateTables(samplesResult))
 			{
 
